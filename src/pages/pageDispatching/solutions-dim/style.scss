@@ -1,0 +1,22 @@
+@import '../../../assets/styles/mixins/flex.scss';
+@import '../../../assets/styles/typography.scss';
+
+.solutions-dim {
+    &__section {
+        background-color: var(--color-bg-gray);
+    }
+
+    &__container {
+        @include flex(column, flex-start);
+        color: var(--color-text-main);
+    }
+
+    &__description {
+        font-family: var(--font-family-uni-sans);
+        @include text-18-22-400;
+    }
+
+    &__title {
+        margin-bottom: 12px;
+    }
+}

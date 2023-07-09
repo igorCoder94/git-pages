@@ -1,0 +1,8 @@
+@import '../../../assets/styles/mixins/flex.scss';
+@import '../../../assets/styles/typography.scss';
+
+.business-hero {
+    &__container {
+        @include flex(column, flex-end, flex-start);
+    }
+}

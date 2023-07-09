@@ -1,0 +1,58 @@
+@import '../../../assets/styles/mixins/flex.scss';
+@import '../../../assets/styles/typography.scss';
+
+.services {
+    &__section {
+        background: var(--color-bg-gray);
+    }
+
+    &__container {
+        @include flex(row, center, flex-start);
+        gap: 32px;
+        padding-top: 100px;
+        width: 100%;
+    }
+
+    &__block {
+        font-family: var(--font-family-inter);
+        color: var(--color-text-main);
+        flex: 1 1 406px;
+        min-width: 300px;
+        max-width: fit-content;
+        border-radius: 10px;
+        border: 1px solid #DBDEEC;
+        background: white;
+        box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.10);
+        overflow-y: hidden;
+        overflow-x: hidden;
+
+        @media (max-width: 800px) {
+            flex-basis: auto;
+            min-width: 0;
+            width: 100%;
+        }
+    }
+
+    &__title {
+        padding: 40px 25px 6px;
+        color: var(--color-text-main);
+        font-family: var(--font-family-inter);
+        font-weight: 700;
+        line-height: normal;
+    }
+
+    &__description {
+        color: var(--color-text-main);
+        font-family: var(--font-family-uni-sans);
+        font-size: 18px;
+        font-weight: 400;
+        line-height: normal;
+        padding: 0 25px;
+        margin-bottom: 30px;
+    }
+
+    &__img {
+        width: 100%;
+        margin-bottom: -4px;
+    }
+}
