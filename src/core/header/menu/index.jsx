@@ -34,9 +34,7 @@ const Menu = ({ open, toggleMenu }) => {
     const close = (element) => {
         toggleMenu();
 
-        if (element) {
-            scrollTo(element);
-        }
+        scrollTo(element);
     }
 
     return (
