@@ -11,6 +11,10 @@
         gap: 32px;
         padding-top: 100px;
         width: 100%;
+
+        @media (max-width: 800px) {
+            padding-top: 60px;
+        }
     }
 
     &__block {
