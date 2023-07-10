@@ -39,6 +39,10 @@
         &--mobile {
             justify-self: flex-start
         }
+
+        &-container {
+            @include flex(row, null, center);
+        }
     }
 
     &__signin {
@@ -63,6 +67,7 @@
 
     &__border {
         border-right: 1px solid white;
+        height: 16px;
         opacity: .3;
     }
 }

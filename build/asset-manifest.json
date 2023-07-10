@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.a69dc41d.css",
-    "main.js": "/static/js/main.a9ae972b.js",
+    "main.css": "/static/css/main.9eda474b.css",
+    "main.js": "/static/js/main.0bd03c9a.js",
     "static/js/787.28525a86.chunk.js": "/static/js/787.28525a86.chunk.js",
     "static/media/desktop.png": "/static/media/desktop.910d7f2e1ff308f94857.png",
     "static/media/integration.png": "/static/media/integration.6116469ba9146ecf7056.png",
@@ -49,9 +49,9 @@
     "static/media/SegoeUI-Bold.woff": "/static/media/SegoeUI-Bold.690474612e4b3b5c70af.woff",
     "static/media/SegoeUI.woff": "/static/media/SegoeUI.40dea9899e829bfb595a.woff",
     "static/media/SegoeUI-Bold.woff2": "/static/media/SegoeUI-Bold.0ac1a7667d928aac19d9.woff2",
-    "static/media/UNIOS-mobile.png": "/static/media/UNIOS-mobile.b051bb103b4779682936.png",
     "static/media/SegoeUI.woff2": "/static/media/SegoeUI.b55d28915ec9ca96c8fb.woff2",
     "static/media/UNIOS.svg": "/static/media/UNIOS.c4dc3ba320e1aa94c3f5f14bb0d6e064.svg",
+    "static/media/UNIOS-mobile.svg": "/static/media/UNIOS-mobile.8f264f5e8ffbc60d0101398ca57256d9.svg",
     "static/media/logo.svg": "/static/media/logo.a5cc481d676f8775e6ca7dc05a191440.svg",
     "static/media/logo-mobile-black.svg": "/static/media/logo-mobile-black.737ac857a1fd890e480c274e9c733da7.svg",
     "static/media/logo-mobile.svg": "/static/media/logo-mobile.fb470af6b1b3bbeaf0dfc82ea26976dd.svg",
@@ -64,12 +64,12 @@
     "static/media/burger.svg": "/static/media/burger.e5924db8f2e1fcb00f402324b4494347.svg",
     "static/media/arrow-right-black.svg": "/static/media/arrow-right-black.6eacbc854af3bec6399b04b00dda13e3.svg",
     "static/media/arrow-right.svg": "/static/media/arrow-right.e777edae802a76d30c6a6dd557730f08.svg",
-    "main.a69dc41d.css.map": "/static/css/main.a69dc41d.css.map",
-    "main.a9ae972b.js.map": "/static/js/main.a9ae972b.js.map",
+    "main.9eda474b.css.map": "/static/css/main.9eda474b.css.map",
+    "main.0bd03c9a.js.map": "/static/js/main.0bd03c9a.js.map",
     "787.28525a86.chunk.js.map": "/static/js/787.28525a86.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.a69dc41d.css",
-    "static/js/main.a9ae972b.js"
+    "static/css/main.9eda474b.css",
+    "static/js/main.0bd03c9a.js"
   ]
 }

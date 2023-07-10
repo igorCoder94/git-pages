@@ -38,7 +38,7 @@ const Header = ({ toggleMenu }) => {
                     <div className='header__burger'>
                         <IconBurger className='header__burger-icon' onClick={openMenu} />
                         <span className='header__border'></span>
-                        <Link to='/'><IconLogoMobile className='header__logo header__logo--mobile' /></Link>
+                        <Link className='header__logo-container' to='/'><IconLogoMobile className='header__logo header__logo--mobile' /></Link>
                     </div>
                     :
                     null}
