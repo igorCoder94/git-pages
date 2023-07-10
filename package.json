@@ -2,7 +2,7 @@
   "name": "landing",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://igorCoder94.github.io",
+  "homepage": "https://igorCoder94.github.io/test",
   "dependencies": {
     "@react-hook/media-query": "^1.1.1",
     "@testing-library/jest-dom": "^5.16.5",
