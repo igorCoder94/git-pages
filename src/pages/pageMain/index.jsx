@@ -7,7 +7,7 @@ import HeroMobile from './hero-mobile';
 import { useMediaQuery } from '@react-hook/media-query';
 
 const PageMain = () => {
-    const isMobile = useMediaQuery('(max-width: 800px');
+    const isMobile = useMediaQuery('(max-width: 800px)');
 
 
 

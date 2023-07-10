@@ -10,7 +10,7 @@ import { useLocation } from 'react-router-dom';
 
 
 const Header = ({ toggleMenu }) => {
-    const isMobile = useMediaQuery('(max-width: 800px');
+    const isMobile = useMediaQuery('(max-width: 800px)');
     const location = useLocation();
 
     function openMenu() {

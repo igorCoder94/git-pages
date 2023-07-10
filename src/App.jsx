@@ -47,6 +47,16 @@ function App() {
     }, 200);
   }, [location.pathname]);
 
+  useEffect(() => {
+    const app = document.getElementById('App__container');
+
+    app.addEventListener('scroll', (e) => {
+      console.log(e);
+    })
+
+    return () => app.removeEventListener('scroll', (e) => { });
+  }, []);
+
   return (
     <div className="App">
       <div id='App__container' className={`App__container ${chooseBackgroundClass()}`}>
