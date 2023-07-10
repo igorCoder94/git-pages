@@ -47,7 +47,7 @@ const Footer = () => {
                         <Link className='footer__link' to='/dispatching'><IconArrow className='footer__arrow' />Диспетчеризация</Link>
                         <Link className='footer__link' to='/business'><IconArrow className='footer__arrow' />Бизнес-процессы</Link>
                         <Link className='footer__link' to='https://go.unios.io/ng/login'><IconArrow className='footer__arrow' />Вход</Link>
-                        <Link className='footer__link' onClick={() => scrollTo('news')} to='/#news'>Новости</Link>
+                        <Link className='footer__link' onClick={() => scrollTo('news')} to='/#news'><IconArrow className='footer__arrow' />Новости</Link>
                     </div>
                 </div>
             </div>
