@@ -52,6 +52,10 @@
         @media (max-width: 500px) {
             align-items: flex-start;
         }
+
+        @media (max-height: 550px) {
+            height: 100%;
+        }
     }
 
     &__logo {
