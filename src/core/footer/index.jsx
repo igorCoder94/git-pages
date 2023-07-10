@@ -5,8 +5,26 @@ import { ReactComponent as IconMail } from '../../assets/icons/mail.svg';
 import { ReactComponent as IconArrow } from '../../assets/icons/arrow-right.svg';
 import { ReactComponent as IconYoutube } from '../../assets/icons/socials/youtube.svg';
 import { Link } from 'react-router-dom';
+import { useLocation } from 'react-router-dom';
+
 
 const Footer = () => {
+    const location = useLocation();
+
+    function scrollTo(element) {
+        if (location.pathname === '/') {
+            if (element) {
+                document.getElementById(element).scrollIntoView({
+                    behavior: 'smooth',
+                })
+            } else {
+                document.getElementById('App__container').scrollTo({
+                    top: 0,
+                });
+            }
+        }
+    }
+
     return (
         <div className='footer'>
             <div className='footer__container'>
@@ -25,10 +43,11 @@ const Footer = () => {
                         <div className='footer__copyright'>© Developed by FTXCOM LLc</div>
                     </div>
                     <div className='footer__nav'>
-                        <Link className='footer__link' to='/'><IconArrow className='footer__arrow' />Главная</Link>
+                        <Link className='footer__link' onClick={() => scrollTo()} to='/'><IconArrow className='footer__arrow' />Главная</Link>
                         <Link className='footer__link' to='/dispatching'><IconArrow className='footer__arrow' />Диспетчеризация</Link>
                         <Link className='footer__link' to='/business'><IconArrow className='footer__arrow' />Бизнес-процессы</Link>
                         <Link className='footer__link' to='https://go.unios.io/ng/login'><IconArrow className='footer__arrow' />Вход</Link>
+                        <Link className='footer__link' onClick={() => scrollTo('news')} to='/#news'>Новости</Link>
                     </div>
                 </div>
             </div>

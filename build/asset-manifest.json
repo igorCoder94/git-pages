@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.7a2dd331.css",
-    "main.js": "/static/js/main.da2c0df2.js",
+    "main.css": "/static/css/main.dbdfa444.css",
+    "main.js": "/static/js/main.fe42a19c.js",
     "static/js/787.28525a86.chunk.js": "/static/js/787.28525a86.chunk.js",
     "static/media/desktop.png": "/static/media/desktop.910d7f2e1ff308f94857.png",
     "static/media/integration.png": "/static/media/integration.6116469ba9146ecf7056.png",
@@ -56,20 +56,20 @@
     "static/media/logo-mobile-black.svg": "/static/media/logo-mobile-black.737ac857a1fd890e480c274e9c733da7.svg",
     "static/media/logo-mobile.svg": "/static/media/logo-mobile.fb470af6b1b3bbeaf0dfc82ea26976dd.svg",
     "static/media/phone.svg": "/static/media/phone.02e6201bf71232ebd229d119842cf308.svg",
+    "index.html": "/index.html",
     "static/media/youtube.svg": "/static/media/youtube.3d2b3aa42d3b5839d9f75c4750447ef7.svg",
     "static/media/mail.svg": "/static/media/mail.80bb7b2d24037b563e6acb045a265030.svg",
-    "index.html": "/index.html",
     "static/media/signin.svg": "/static/media/signin.f63ddeec590f0e1568dd463fc64c82ce.svg",
     "static/media/close.svg": "/static/media/close.e061dded9f27ca18d75f60375ccbb46c.svg",
     "static/media/burger.svg": "/static/media/burger.e5924db8f2e1fcb00f402324b4494347.svg",
     "static/media/arrow-right-black.svg": "/static/media/arrow-right-black.6eacbc854af3bec6399b04b00dda13e3.svg",
     "static/media/arrow-right.svg": "/static/media/arrow-right.e777edae802a76d30c6a6dd557730f08.svg",
-    "main.7a2dd331.css.map": "/static/css/main.7a2dd331.css.map",
-    "main.da2c0df2.js.map": "/static/js/main.da2c0df2.js.map",
+    "main.dbdfa444.css.map": "/static/css/main.dbdfa444.css.map",
+    "main.fe42a19c.js.map": "/static/js/main.fe42a19c.js.map",
     "787.28525a86.chunk.js.map": "/static/js/787.28525a86.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.7a2dd331.css",
-    "static/js/main.da2c0df2.js"
+    "static/css/main.dbdfa444.css",
+    "static/js/main.fe42a19c.js"
   ]
 }
