@@ -7,7 +7,8 @@
     }
 
     &__container {
-        @include flex(column);
+        @include flex(column, center, center);
+        height: 100%;
     }
 
     &__img>img {
@@ -17,6 +18,7 @@
     }
 
     &__img {
+        max-width: 300px;
         margin-bottom: 25px;
     }
 

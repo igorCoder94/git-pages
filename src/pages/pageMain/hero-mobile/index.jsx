@@ -1,4 +1,4 @@
-import unios from '../../../assets/images/main/UNIOS-mobile.png';
+import unios from '../../../assets/images/main/UNIOS-mobile.svg';
 import './style.scss';
 
 const HeroMobile = () => {
