@@ -74,8 +74,9 @@
             }
 
             @media (max-width: 500px) {
-                flex-direction: column;
-                text-align: center;
+                // flex-direction: column;
+                // text-align: center;
+                font-size: 14px;
                 flex-basis: 0;
                 height: 100%;
                 flex-basis: auto;
@@ -90,8 +91,16 @@
         &__icon {
             width: 60px;
 
+            @media (max-width: 500px) {
+                width: 30px;
+            }
+
             &>img {
                 width: 60px;
+
+                @media (max-width: 500px) {
+                    width: 30px;
+                }
             }
         }
     }

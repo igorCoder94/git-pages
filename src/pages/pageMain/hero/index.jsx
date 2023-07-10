@@ -1,6 +1,6 @@
 import './style.scss';
-import unios from '../../../assets/images/main/UNIOS.png';
-import uniosTransparent from '../../../assets/images/main/UNIOS-transparent.png';
+import unios from '../../../assets/images/main/UNIOS.svg';
+import uniosTransparent from '../../../assets/images/main/UNIOS-transparent.svg';
 
 
 const Hero = () => {
