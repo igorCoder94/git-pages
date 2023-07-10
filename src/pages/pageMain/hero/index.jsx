@@ -1,5 +1,7 @@
 import './style.scss';
-import Unios from '../../../assets/images/main/UNIOS.svg';
+import unios from '../../../assets/images/main/UNIOS.png';
+import uniosTransparent from '../../../assets/images/main/UNIOS-transparent.png';
+
 
 const Hero = () => {
     return <section className='hero__section'>
@@ -9,7 +11,8 @@ const Hero = () => {
             <div className='hero__border-right-center'></div>
             <div className='hero__border-right'></div>
             <div className='hero__logo'>
-                <img className='hero__img' src={Unios} alt="" />
+                <img className='hero__img-transparent' src={uniosTransparent} alt="unios" />
+                <img className='hero__img' src={unios} alt="unios" />
             </div>
             <div className='hero__subtitle'>Сервис автоматизации эксплуатации оборудования</div>
         </div>

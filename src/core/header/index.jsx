@@ -44,10 +44,10 @@ const Header = ({ toggleMenu }) => {
                     null}
                 {!isMobile ? <Link to='/'><IconLogo className='header__logo' /></Link> : null}
                 {!isMobile ? <nav className='header-nav'>
-                    <span><Link onClick={() => scrollTo()} to='/'>Главная</Link></span>
-                    <span><Link onClick={() => scrollTo()} to='/dispatching'>Диспетчеризация</Link></span>
-                    <span><Link onClick={() => scrollTo()} to='/business'>Бизнесс-процессы</Link></span>
-                    <span><Link onClick={() => scrollTo('news')} to='/#news'>Новости</Link></span>
+                    <span className='header-nav__link'><Link onClick={() => scrollTo()} to='/'>Главная</Link></span>
+                    <span className='header-nav__link'><Link onClick={() => scrollTo()} to='/dispatching'>Диспетчеризация</Link></span>
+                    <span className='header-nav__link'><Link onClick={() => scrollTo()} to='/business'>Бизнесс-процессы</Link></span>
+                    <span className='header-nav__link'><Link onClick={() => scrollTo('news')} to='/#news'>Новости</Link></span>
                 </nav> : null}
                 <Link to='https://go.unios.io/ng/login' className='header__signin'>
                     <IconSignin />

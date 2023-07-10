@@ -35,6 +35,11 @@
         padding: 8px 18px 10px;
         border-radius: 3px;
         background: #283EFF;
+        transition: all linear .2s;
+
+        &:hover {
+            opacity: .5;
+        }
     }
 
     &__border {
