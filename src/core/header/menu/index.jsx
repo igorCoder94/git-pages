@@ -21,7 +21,8 @@ const Menu = ({ open, toggleMenu }) => {
             if (element) {
                 document.getElementById(element).scrollIntoView({
                     behavior: 'smooth',
-                })
+                });
+                location.hash = '';
             } else {
                 document.getElementById('App__container').scrollTo({
                     top: 0,
