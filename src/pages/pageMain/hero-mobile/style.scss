@@ -1,9 +1,14 @@
+@import '../../../assets/styles/mixins/flex.scss';
+@import '../../../assets/styles/typography.scss';
+
 .hero-mobile {
     &__section {
         position: relative;
     }
 
-    &__container {}
+    &__container {
+        @include flex(column);
+    }
 
     &__img>img {
         mix-blend-mode: color-dodge;
