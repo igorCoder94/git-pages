@@ -33,12 +33,6 @@ const Menu = ({ open, toggleMenu }) => {
 
     const close = (element) => {
         toggleMenu();
-        if (element === 'close') return;
-
-        document.getElementById('App__container').scrollTo({
-            top: 0,
-            behavior: 'instant',
-        });
 
         if (element) {
             scrollTo(element);
@@ -49,7 +43,7 @@ const Menu = ({ open, toggleMenu }) => {
         <div ref={node}>
             <div className={`menu__container ${open ? 'menu__container--opened' : ''}`}>
                 <div className='menu__header'>
-                    <IconClose className='menu__close' onClick={() => close('close')} />
+                    <IconClose className='menu__close' onClick={() => close()} />
                     <span className='menu__border'></span>
                     <Link className='menu__icon' to='/'><Icon /></Link>
                 </div>
