@@ -45,8 +45,8 @@ const Menu = ({ open, toggleMenu }) => {
                 </div>
                 <div className="menu__links">
                     <Link className='menu__link' to='/' onClick={() => close()}>Главная <IconArrow /></Link>
-                    <Link className='menu__link' to='dispatching' onClick={() => close()}>Диспетчеризация <IconArrow /></Link>
-                    <Link className='menu__link' to='business' onClick={() => close()}>Бизнесс-процессы <IconArrow /></Link>
+                    <Link className='menu__link' to='/dispatching' onClick={() => close()}>Диспетчеризация <IconArrow /></Link>
+                    <Link className='menu__link' to='/business' onClick={() => close()}>Бизнесс-процессы <IconArrow /></Link>
                     <Link className='menu__link' to='/#news' onClick={() => close('news')}>Новости <IconArrow /></Link>
                 </div>
             </div>
