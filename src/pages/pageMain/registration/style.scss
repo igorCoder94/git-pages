@@ -44,6 +44,10 @@
         height: calc(100% + 200px);
         margin-top: -200px;
         z-index: -1;
+
+        @media (max-width: 800px) {
+            display: none;
+        }
     }
 
     &__border-left {
