@@ -40,6 +40,7 @@
         @include text-18-22-400;
         padding-left: 20px;
         list-style: disc;
+        white-space: pre-wrap;
 
         &>li {
             margin-bottom: 8px;

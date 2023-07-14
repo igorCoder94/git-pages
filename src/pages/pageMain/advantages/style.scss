@@ -3,7 +3,7 @@
 
 .advantages {
     &__section {
-        background: var(--color-bg-gray);
+        background: #F9F9F9;
     }
 
     &__container {
@@ -55,7 +55,6 @@
         @include flex(row, space-between, flex-start, nowrap);
         color: var(--color-text-main);
         padding-top: 60px;
-        padding-bottom: 60px;
         gap: 60px;
         width: 100%;
 

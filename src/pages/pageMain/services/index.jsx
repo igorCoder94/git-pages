@@ -9,10 +9,10 @@ const Services = () => {
         <div className='services__container container'>
             <div className="services__block">
                 <h2 className='services__title'>
-                    Unios ДИМ
+                    Unios Диспетчеризация SCADA/IoT
                 </h2>
                 <div className='services__description'>
-                    Единообразное отображение и анализ данных SCADA-систем предприятия
+                    Универсальный интегратор любых SCADA-систем предприятия
                 </div>
                 <img className='services__img' src={dim} alt="" />
             </div>
@@ -21,7 +21,7 @@ const Services = () => {
                     Unios ТОиР
                 </h2>
                 <div className='services__description'>
-                    Гибкий автоматизированный бизнес-процесс техобслуживания и ремонта
+                    Гибкое построение любых бизнес процессов ТОиР
                 </div>
                 <img className='services__img' src={toir} alt="" />
             </div>
@@ -30,7 +30,7 @@ const Services = () => {
                     UNIOS Интеграция
                 </h2>
                 <div className='services__description'>
-                    Непрерывный обмен документами с системами предприятия
+                    Интеграция с любыми внешними продуктами в рамках задач сервис
                 </div>
                 <img className='services__img' src={integration} alt="" />
             </div>
@@ -39,7 +39,7 @@ const Services = () => {
                     UNIOS Контроль исполнения
                 </h2>
                 <div className='services__description'>
-                    Оперативная постановка задач и контроль выполнения работ
+                    Контроль выполнения задач исполнителями и снижение рисков
                 </div>
                 <img className='services__img' src={control} alt="" />
             </div>

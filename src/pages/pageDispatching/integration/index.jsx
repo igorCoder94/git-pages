@@ -2,7 +2,7 @@ import './style.scss';
 import integration from '../../../assets/images/dispatching/integration.png';
 
 const descriptionList = [
-    'Адаптивный модуль интеграции с различными системами предприятия(СЭД, BPM, BIP, CCTV)',
+    'Адаптивный модуль интеграции с различными системами предприятия  \n(СЭД, BPM, BIP, CCTV)',
     'Business Process Management - Актуальное состояние оборудования предприятия',
     'Building Information Model 2D/3D планы расположения устройств на объекте',
     'CCTV Промышленная видео аналитика, определение аварийных ситуаций',
