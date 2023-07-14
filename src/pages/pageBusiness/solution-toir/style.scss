@@ -14,6 +14,7 @@
     &__description {
         font-family: var(--font-family-uni-sans);
         @include text-18-22-400;
+        max-width: 898px;
     }
 
     &__title {

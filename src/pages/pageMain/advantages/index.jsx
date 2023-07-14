@@ -1,6 +1,5 @@
 import './style.scss';
 import hub from '../../../assets/images/main/hub.png';
-
 import ai from '../../../assets/images/main/ai.png';
 import model from '../../../assets/images/main/model.png';
 import api from '../../../assets/images/main/api.png';
@@ -62,6 +61,14 @@ const data = [
         text: '2D / 3D планы расположения устройств на объекте',
         icon: model,
     },
+];
+
+
+const demoList = [
+    'Единообразное отображение и анализ данных SCADA систем предприятия',
+    'Гибкий автоматизированный бизнес - процесс техобслуживания и ремонта',
+    'Оперативная постановка задач и контроль выполнения работ Исполнителями в реальном времени',
+    'Непрерывный обмен документами и информацией с основными системами предприятия',
 ]
 
 const Block = ({ icon, title, text }) => {
@@ -82,6 +89,22 @@ const Advantages = () => {
             <div className='advantages__header'>
                 <h2 className='advantages__title'>Преимущества</h2>
                 <div className='advantages__description'>Особенности платформы Unios</div>
+            </div>
+            <div className='advantages__demo'>
+                <div className='advantages__content'>
+                    <h2 className='advantages__title'>Демонстрация </h2>
+                    <div className='advantages__description'>
+                        <div className='advantages__text'>
+                            Интеграционная платформа UNIOS предназначена для комплексного мониторинга и обслуживания различных автоматизированных систем и устройств предприятия.Платформа решает следующие задачи:
+                        </div>
+                        <ul>
+                            {demoList.map((el, index) => (<li key={index}>{el}</li>))}
+                        </ul>
+                    </div>
+                </div>
+                <div className='advantages__video'>
+                    <iframe width="100%" height="452" src="https://www.youtube.com/embed/LqDzd_6OAqw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                </div>
             </div>
             <div className='advantages__blocks'>
                 {data.map((item, index) => <Block key={index} icon={item.icon} title={item.title} text={item.text} />)}
