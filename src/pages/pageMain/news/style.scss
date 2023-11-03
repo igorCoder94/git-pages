@@ -7,13 +7,13 @@
     }
 
     &__container {
+        position: relative;
+        @include flex(row);
         color: var(--color-text-main);
         padding-top: 100px;
-        padding-bottom: 100px;
-
-        @media (max-width: 800px) {
-            padding-top: 60px;
-        }
+        padding-bottom: 0;
+        padding-top: 60px;
+        z-index: 1;
     }
 
     &__header {
@@ -27,68 +27,127 @@
         font-family: var(--font-family-inter);
         font-weight: 700;
         line-height: normal;
-        margin-bottom: 16px;
+        margin-bottom: 100px;
+    }
+
+    &__subtitle {
+        border-left: none;
+        margin-bottom: 60px;
+    }
+
+    &__icon {
+        width: 100%;
     }
 
     &__description {
         font-family: var(--font-family-uni-sans);
         @include text-16-16-400;
+        max-width: 616px;
         font-size: 16px;
         font-weight: 400;
         line-height: normal;
     }
 
     &__blocks {
-        @include flex(row, center);
-        gap: 32px;
-        padding-top: 30px;
+        @include flex(row, center, flex-start);
+        padding-top: 40px;
+        column-gap: 32px;
+        row-gap: 15px;
+        width: 100%;
+
+        @media (max-width: 800px) {
+            flex-direction: column;
+        }
     }
 
-    &__block {
-        flex: 1 1 402px;
-        min-width: 300px;
-        max-width: 432px;
-        border-radius: 10px;
-        border: 1px solid #DBDEEC;
-        background: white;
-        overflow-y: hidden;
-        overflow-x: hidden;
+    &__demo {
+        @include flex(row, space-between, flex-start, nowrap);
+        color: var(--color-text-main);
+        padding-top: 60px;
+        gap: 60px;
+        width: 100%;
 
-        @media (max-width: 550px) {
-            flex-basis: auto;
-            min-width: 0;
-            width: 100%;
+        @media (max-width: 800px) {
+            @include flex(column-reverse, flex-start, center, nowrap);
+        }
+    }
+
+    &__content {
+        @include flex(column);
+        max-width: 496px;
+
+    }
+
+    &__description {
+        font-family: var(--font-family-uni-sans);
+        @include text-18-22-400;
+
+        &>ul {
+            padding-left: 20px;
+            list-style: disc;
+
+            &>li {
+                margin-bottom: 8px;
+            }
         }
     }
 
     &__text {
-        font-family: var(--font-family-uni-sans);
-        font-size: 18px;
-        font-weight: 400;
-        padding: 15px 0;
-        line-height: normal;
+        margin-bottom: 20px;
     }
 
-    &__subtitle {
-        color: var(--color-text-main);
-        font-family: var(--font-family-inter);
-        font-size: 20px;
-        font-weight: 700;
-        margin-bottom: 15px;
-        line-height: normal;
-    }
-
-    &__content {
-        @include flex(column, flex-start);
-        padding: 25px 25px 20px;
-    }
-
-    &__img {
+    &__video {
         width: 100%;
     }
 
-    &__ul {
-        list-style-type: "- ";
-        list-style-position: inside;
+    &-block {
+        &__container {
+            @include flex(row, space-between, center, nowrap);
+            flex: 0 0 auto;
+            width: 432px;
+            height: 134px;
+            border-radius: 10px;
+            border: 1px solid var(--color-border-gray);
+            background: white;
+            gap: 32px;
+            padding: 20px 25px;
+
+            @media (max-width: 1350px) {}
+
+            @media (max-width: 800px) {
+                width: 100%;
+                min-width: 0;
+                max-width: none;
+                justify-content: flex-start;
+            }
+
+            @media (max-width: 500px) {
+                font-size: 14px;
+                flex-basis: 0;
+                height: 100%;
+                flex-basis: auto;
+            }
+        }
+
+        &__title {
+            font-weight: 700;
+            margin-bottom: 12px;
+        }
+
+        &__icon {
+            width: 60px;
+
+            @media (max-width: 500px) {
+                width: 30px;
+            }
+
+            &>img {
+                width: 60px;
+
+                @media (max-width: 500px) {
+                    width: 30px;
+                }
+            }
+        }
     }
 }

@@ -1,0 +1,46 @@
+.border {
+    &__left {
+        position: absolute;
+        top: 0;
+        height: 100%;
+        border-left: 1px dashed #DDE1EC;
+        left: 0%;
+        z-index: -1;
+    }
+    
+    &__left-middle {
+        position: absolute;
+        top: 0;
+        height: 100%;
+        border-left: 1px dashed #DDE1EC;
+        left: 25%;
+        z-index: -1;
+    }
+    
+    &__middle {
+        position: absolute;
+        top: 0;
+        height: 100%;
+        border-left: 1px dashed #DDE1EC;
+        left: 50%;
+        z-index: -1;
+    }
+    
+    &__right-middle {
+        position: absolute;
+        top: 0;
+        height: 100%;
+        border-left: 1px dashed #DDE1EC;
+        left: 75%;
+        z-index: -1;
+    }
+    
+    &__right {
+        position: absolute;
+        top: 0;
+        height: 100%;
+        border-left: 1px dashed #DDE1EC;
+        right: 0%;
+        z-index: -1;
+    }
+}

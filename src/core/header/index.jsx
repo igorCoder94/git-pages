@@ -3,7 +3,6 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { ReactComponent as IconLogo } from '../../assets/icons/logo.svg';
 import { ReactComponent as IconLogoMobile } from '../../assets/icons/logo-mobile.svg';
-import { ReactComponent as IconSignin } from '../../assets/icons/signin.svg';
 import { ReactComponent as IconBurger } from '../../assets/icons/burger.svg';
 import { useMediaQuery } from '@react-hook/media-query';
 import { useLocation } from 'react-router-dom';
@@ -46,12 +45,13 @@ const Header = ({ toggleMenu }) => {
                 {!isMobile ? <nav className='header-nav'>
                     <span className='header-nav__link'><Link onClick={() => scrollTo()} to='/'>Главная</Link></span>
                     <span className='header-nav__link'><Link onClick={() => scrollTo()} to='/dispatching'>Диспетчеризация</Link></span>
-                    <span className='header-nav__link'><Link onClick={() => scrollTo()} to='/business'>Бизнесс-процессы</Link></span>
+                    <span className='header-nav__link'><Link onClick={() => scrollTo()} to='/business'>ТОиР</Link></span>
+                    <span className='header-nav__link'><Link onClick={() => scrollTo()} to='/business'>Интеграция</Link></span>
+                    <span className='header-nav__link'><Link onClick={() => scrollTo()} to='/business'>Контроль</Link></span>
                     <span className='header-nav__link'><Link onClick={() => scrollTo('news')} to='/#news'>Новости</Link></span>
                 </nav> : null}
                 <Link to='https://go.unios.io/ng/login' className='header__signin'>
-                    <IconSignin />
-                    {!isMobile ? <span>Вход</span> : null}
+                    {!isMobile ? <span>Контакты</span> : null}
                 </Link>
             </div>
         </div >

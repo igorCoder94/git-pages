@@ -1,16 +1,17 @@
-import Advantages from './advantages';
 import Hero from './hero';
-import Services from './services';
+import Scada from './scada';
+import NewsCards from './news-cards';
+import Toir from './toir';
+import Control from './control';
 import News from './news';
-import Registration from './registration';
+import Join from './join';
 import HeroMobile from './hero-mobile';
 import { useMediaQuery } from '@react-hook/media-query';
 import { Helmet } from 'react-helmet';
+import Integration from './integration';
 
 const PageMain = () => {
     const isMobile = useMediaQuery('(max-width: 800px)');
-
-
 
     return (
         <>
@@ -20,10 +21,13 @@ const PageMain = () => {
                 <meta name="keywords" content="автоматизация, IoT, ТОиР, диспетчеризация, мониторинг, сервис, эксплуатация, обслуживание, оборудование, Эф-Ти-Икс-Ком, FTXCom, Unios, Юниос, ЭФ ТИ ИКС КОМ, SCADA, API, CCTV, видеонаблюдение, аварийные ситуации, устройство, объект" />
             </Helmet>
             {isMobile ? <HeroMobile /> : <Hero />}
-            <Services />
-            <Advantages />
+            <Scada />
+            <Toir />
+            <Integration />
+            <Control />
             <News />
-            <Registration />
+            <NewsCards />
+            <Join />
         </>
     )
 }
