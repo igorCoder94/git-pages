@@ -2,19 +2,34 @@ import './style.scss';
 import React from "react";
 import { Link } from "react-router-dom";
 import { ReactComponent as IconLogo } from '../../assets/icons/logo.svg';
+import { ReactComponent as IconLogoDark } from '../../assets/icons/logo-dark.svg';
 import { ReactComponent as IconLogoMobile } from '../../assets/icons/logo-mobile.svg';
+import { ReactComponent as IconLogoMobileBlack } from "../../assets/icons/logo-mobile-black.svg";
 import { ReactComponent as IconBurger } from '../../assets/icons/burger.svg';
+import { ReactComponent as IconBurgerBlack} from '../../assets/icons/burger-black.svg';
 import { useMediaQuery } from '@react-hook/media-query';
 import { useLocation } from 'react-router-dom';
 
-
-const Header = ({ toggleMenu }) => {
-    const isMobile = useMediaQuery('(max-width: 800px)');
+const Header = ({ toggleMenu, togglePopup }) => {
+    const isMobile = useMediaQuery('(max-width: 1100px)');
     const location = useLocation();
 
     function openMenu() {
         toggleMenu();
     }
+
+    function openPopup() {
+        togglePopup();
+    }
+
+    function chooseBackgroundClass() {
+        switch (location.pathname) {
+          case '/':
+            return 'header-main';
+          default:
+            return 'header-light';
+        }
+      }
 
     function scrollTo(element) {
         if (location.pathname === '/') {
@@ -32,27 +47,35 @@ const Header = ({ toggleMenu }) => {
 
     return (
         <div className='header'>
-            <div className='header__container'>
+            <div className={`header__container ${chooseBackgroundClass()}`}>
                 {isMobile ?
                     <div className='header__burger'>
-                        <IconBurger className='header__burger-icon' onClick={openMenu} />
+                        { chooseBackgroundClass() === 'header-main' ? <IconBurger className='header__burger-icon' onClick={openMenu} /> : 
+                        <IconBurgerBlack className='header__burger-icon' onClick={openMenu} /> }
                         <span className='header__border'></span>
-                        <Link className='header__logo-container' to='/'><IconLogoMobile className='header__logo header__logo--mobile' /></Link>
+                        <Link className='header__logo-container' to='/'>
+                            { chooseBackgroundClass() === 'header-main' ? <IconLogoMobile className='header__logo header__logo--mobile' /> :
+                                <IconLogoMobileBlack className='header__logo header__logo--mobile' />
+                            }
+                        </Link>
                     </div>
                     :
                     null}
-                {!isMobile ? <Link to='/'><IconLogo className='header__logo' /></Link> : null}
+                {!isMobile ? <Link to='/'>
+                        { location.pathname === '/' ? <IconLogo className='header__logo' /> : <IconLogoDark className='header__logo' />}
+                    </Link> : null}
                 {!isMobile ? <nav className='header-nav'>
                     <span className='header-nav__link'><Link onClick={() => scrollTo()} to='/'>Главная</Link></span>
-                    <span className='header-nav__link'><Link onClick={() => scrollTo()} to='/dispatching'>Диспетчеризация</Link></span>
-                    <span className='header-nav__link'><Link onClick={() => scrollTo()} to='/business'>ТОиР</Link></span>
-                    <span className='header-nav__link'><Link onClick={() => scrollTo()} to='/business'>Интеграция</Link></span>
-                    <span className='header-nav__link'><Link onClick={() => scrollTo()} to='/business'>Контроль</Link></span>
+                    <span className='header-nav__link'><Link onClick={() => scrollTo('dispatching')} to='/#dispatching'>Диспетчеризация</Link></span>
+                    <span className='header-nav__link'><Link onClick={() => scrollTo('toir')} to='/#toir'>ТОиР</Link></span>
+                    <span className='header-nav__link'><Link onClick={() => scrollTo('integration')} to='/#integration'>Интеграция</Link></span>
+                    <span className='header-nav__link'><Link onClick={() => scrollTo('control')} to='/#control'>Контроль</Link></span>
                     <span className='header-nav__link'><Link onClick={() => scrollTo('news')} to='/#news'>Новости</Link></span>
                 </nav> : null}
-                <Link to='https://go.unios.io/ng/login' className='header__signin'>
-                    {!isMobile ? <span>Контакты</span> : null}
-                </Link>
+                <div className='header__signin'>
+                    {!isMobile ? <Link className='header-nav__link' onClick={() => scrollTo('footer')} to='/#footer'>Контакты</Link> : null}
+                    {!isMobile ? <span className='header-nav__connect' onClick={openPopup}>Связаться с нами</span> : null}
+                </div>
             </div>
         </div >
     )

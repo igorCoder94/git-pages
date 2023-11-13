@@ -10,10 +10,10 @@ import { ReactComponent as IconTenchat } from '../../assets/icons/socials/tencha
 
 import { Link } from 'react-router-dom';
 import { useLocation } from 'react-router-dom';
-import Borders from '../../shared';
+import Borders from '../../shared/borders';
 
 
-const Footer = () => {
+const Footer = ({ togglePopup }) => {
     const location = useLocation();
 
     function scrollTo(element) {
@@ -30,8 +30,12 @@ const Footer = () => {
         }
     }
 
+    function openPopup() {
+        togglePopup();
+    }
+
     return (
-        <div className='footer'>
+        <div className='footer' id="footer">
             <div className='footer__container'>
                 <div className='footer__inner'>
                     <div className='footer__info'>
@@ -43,28 +47,27 @@ const Footer = () => {
                             <IconMail className='footer-icon__mail' /><span>hello@unios.io</span>
                         </div>
                         <div className='footer__socials'>
-                            <IconYoutube className='footer__social' />
-                            <IconVK className='footer__social' />
-                            <IconInstagram className='footer__social' />
-                            <IconTenchat className='footer__social' />
-                            <IconHabr className='footer__social' />
+                            <a href='https://www.youtube.com/@unios8721' target="_blank" rel="noreferrer"><IconYoutube className='footer__social' /></a>
+                            <a href='https://vk.com/uniosio' target="_blank" rel="noreferrer"><IconVK className='footer__social' /></a>
+                            <a href='https://instagram.com/unios_iot?igshid=NGVhN2U2NjQ0Yg==' target="_blank" rel="noreferrer"><IconInstagram className='footer__social' /></a>
+                            <a href='https://tenchat.ru/chats/group/44320e17-12d7-4110-b86e-6370fc4190a9' target="_blank" rel="noreferrer"><IconTenchat className='footer__social' /></a>
+                            <a href='https://career.habr.com/companies/unios' target="_blank" rel="noreferrer"><IconHabr className='footer__social' /></a>
                         </div>
                         <div className='footer__copyright'>© Developed by FTXCOM LLc</div>
                     </div>
                     <div className='footer__nav-container'>
                         <div className='footer__nav'>
                             <Link className='footer__link' onClick={() => scrollTo()} to='/'>Главная</Link>
-                            <Link className='footer__link' to='/dispatching'>Диспетчеризация</Link>
-                            <Link className='footer__link' to='/business'>ТОиР</Link>
-                            <Link className='footer__link' onClick={() => scrollTo('news')} to='/#news'>Интеграция</Link>
+                            <Link className='footer__link' onClick={() => scrollTo('dispatching')} to='/#dispatching'>Диспетчеризация</Link>
+                            <Link className='footer__link' onClick={() => scrollTo('toir')} to='/#toir'>ТОиР</Link>
+                            <Link className='footer__link' onClick={() => scrollTo('integration')} to='/#integration'>Интеграция</Link>
                         </div>
                         <div className='footer__nav footer__nav-right'>
-                            <Link className='footer__link' onClick={() => scrollTo()} to='/'>Контроль</Link>
-                            <Link className='footer__link footer__link-news' to='/dispatching'>Новости</Link>
-                            <Link className='footer__link footer__link-connect' to='/business'>Связаться с нами ></Link>
+                            <Link className='footer__link' onClick={() => scrollTo('control')} to='/#control'>Контроль</Link>
+                            <Link className='footer__link footer__link-news' onClick={() => scrollTo('news')} to='/#news'>Новости</Link>
+                            <div onClick={openPopup} className='footer__link footer__link-connect'>Связаться с нами ></div>
                         </div>
                     </div>
-                    
                 </div>
                 <Borders />
             </div>

@@ -9,7 +9,7 @@ import { useLocation } from "react-router-dom";
 
 // import { useOnClickOutside } from "../../hooks";
 
-const Menu = ({ open, toggleMenu }) => {
+const Menu = ({ open, toggleMenu, togglePopup }) => {
     const node = useRef(null);
     const toCloseMenu = true;
     const location = useLocation();
@@ -39,6 +39,11 @@ const Menu = ({ open, toggleMenu }) => {
         }
     }
 
+    function openPopup() {
+        close();
+        togglePopup();
+    }
+
     return (
         <div ref={node}>
             <div className={`menu__container ${open ? 'menu__container--opened' : ''}`}>
@@ -49,9 +54,13 @@ const Menu = ({ open, toggleMenu }) => {
                 </div>
                 <div className="menu__links">
                     <Link className='menu__link' to='/' onClick={() => close()}>Главная <IconArrow /></Link>
-                    <Link className='menu__link' to='/dispatching' onClick={() => close()}>Диспетчеризация <IconArrow /></Link>
-                    <Link className='menu__link' to='/business' onClick={() => close()}>Бизнесс-процессы <IconArrow /></Link>
-                    <Link className='menu__link' to='/#news' onClick={() => close('news')}>Новости <IconArrow /></Link>
+                    <Link className='menu__link' to='#dispatching' onClick={() => close('dispatching')}>Диспетчеризация <IconArrow /></Link>
+                    <Link className='menu__link' to='#business' onClick={() => close('toir')}>ТОиР<IconArrow /></Link>
+                    <Link className='menu__link' to='#integration' onClick={() => close('news')}>Интеграция<IconArrow /></Link>
+                    <Link className='menu__link' to='#control' onClick={() => close('control')}>Контроль<IconArrow /></Link>
+                    <Link className='menu__link' to='#news' onClick={() => close('news')}>Новости<IconArrow /></Link>
+                    <Link className='menu__link' to='#footer' onClick={() => close('footer')}>Контакты<IconArrow /></Link>
+                    <Link className='menu__link' onClick={openPopup}>Связаться с нами<IconArrow /></Link>
                 </div>
             </div>
         </div >

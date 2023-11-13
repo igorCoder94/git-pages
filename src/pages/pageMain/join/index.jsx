@@ -1,6 +1,7 @@
-import Borders from '../../../shared';
+import Borders from '../../../shared/borders';
 import blueDoc from '../../../assets/icons/pageMain/join/page-blue.svg';
 import yellowDoc from '../../../assets/icons/pageMain/join/page-yellow.svg';
+import { Link } from 'react-router-dom';
 import './style.scss';
 
 const Join = () => {
@@ -16,19 +17,25 @@ const Join = () => {
                 </div>
             </div>
             <div className='join__docs'>
-                <div className='join__doc join__yellow'>
+                <div className='join__doc join__blue'>
                     <img className='join__img' src={blueDoc} alt="" />
                     <div className='join__text'>
                         Вы можете для начала ознакомиться с нашей презентацией.
                     </div>
-                    <a className='join__text join__link' href="">Скачать презентацию ></a>
+                    <div className='join__links'>
+                        <a className='join__text join__link' href="/Руководство пользователя.pdf" download>Руководство по эксплуатации ></a>
+                        <a className='join__text join__link' href="/Unios. Презентация 26.09.23.pdf" download>Презентация ></a>
+                    </div>
                 </div>
                 <div className='join__doc join__yellow'>
                     <img className='join__img' src={yellowDoc} alt="" />
-                    <div className='join__text'>
-                        Начните строить свою интеграцию за считанные минуты. Подберите свой уникальный пакет специально для вашего бизнеса.
+                    <div className='join__text-yellow'>
+                        Начните строить свою интеграцию за считанные минуты. 
                     </div>
-                    <a className='join__text join__link' href="">Узнать больше ></a>
+                    <div className='join__links'>
+                        <Link className='join__text join__link' to="/request">Подобрать план ></Link>
+                        <a className='join__text join__link' href="/Unios_Price_list_7_08.pdf" download>Прайс ></a>
+                    </div>
                 </div>
             </div>
             <Borders />

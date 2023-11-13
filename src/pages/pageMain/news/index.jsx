@@ -1,4 +1,4 @@
-import Borders from '../../../shared';
+import Borders from '../../../shared/borders';
 import './style.scss';
 
 const demoList = [
@@ -9,7 +9,7 @@ const demoList = [
 ]
 
 const News = () => {
-    return <section className='news__section'>
+    return <section id='news' className='news__section'>
         <div className='news__container container'>
         <h2 className='news__title'>Новости</h2>
             <div className='news__demo'>
@@ -25,7 +25,7 @@ const News = () => {
                     </div>
                 </div>
                 <div className='news__video'>
-                    <iframe width="100%" height="452" src="https://www.youtube.com/embed/LqDzd_6OAqw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                    <iframe width="100%" height="481" src="https://www.youtube.com/embed/eSE6hXl4IxQ?si=oeMaDK39pcOA1HoC" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe>
                 </div>
             </div>
             <Borders />

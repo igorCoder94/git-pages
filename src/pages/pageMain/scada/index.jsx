@@ -1,13 +1,15 @@
 import './style.scss';
 import scada from '../../../assets/images/main/scada/scada.png';
 import scheme from '../../../assets/images/main/scada/scheme.png';
+import schemeSvg from '../../../assets/images/main/scada/111.svg';
 import hub from '../../../assets/icons/pageMain/scada/hub.svg';
 import ai from '../../../assets/icons/pageMain/scada/ai.svg';
 import smart from '../../../assets/icons/pageMain/scada/smart.svg';
 import report from '../../../assets/icons/pageMain/scada/report.svg';
 import settings from '../../../assets/icons/pageMain/scada/settings.svg';
 import table from '../../../assets/icons/pageMain/scada/table.svg';
-import Borders from '../../../shared';
+import Borders from '../../../shared/borders';
+import { ReactComponent as IconScheme } from '../../../assets/images/main/scada/111.svg';
 
 const listOne = [
     {
@@ -52,7 +54,7 @@ const listTwo = [
 ];
 
 const Services = () => {
-    return <section className='scada__section'>
+    return <section id='dispatching' className='scada__section'>
         <div className='scada__container container'>
             <div className='scada__left'>
                 <h2 className='scada__title'>
@@ -87,7 +89,7 @@ const Services = () => {
                 </div>
             </div>
             <div className='scada__right'>
-                <img src={scheme} alt="scheme" />
+                <IconScheme className='scada__scheme'/>
             </div>
             {/* <div className='scada__border-left'></div>
             <div className='scada__border-right'></div>

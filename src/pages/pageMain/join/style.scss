@@ -23,6 +23,11 @@
         padding-top: 100px;
         font-family: var(--font-family-segoe);
         z-index: 1;
+        
+        @media (max-width: 1000px) {
+            flex-direction: column;
+            gap: 20px;
+        }
     }
 
     &__description {
@@ -37,6 +42,10 @@
     &__docs {
         @include flex(row, space-between, flex-start, nowrap);
         margin-right: -15px;
+
+        @media (max-width: 544px) {
+            flex-direction: column;
+        }
     }
 
     &__img {
@@ -45,12 +54,28 @@
 
     &__yellow {
         padding-left: 15px;
+        min-width: 268px;
+        
+        @media (max-width: 544px) {
+            padding-left: 0;
+            margin-top: 40px;
+        }
     }
 
     &__text {
         font-family: var(--font-family-uni-sans);
         font-size: 16px;
         max-width: 255px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        margin-bottom: 24px;
+    }
+
+    &__text-yellow {
+        font-family: var(--font-family-uni-sans);
+        font-size: 16px;
+        max-width: 238px;
         font-style: normal;
         font-weight: 400;
         line-height: normal;
@@ -74,5 +99,9 @@
         width: 105%;
         height: 315px;
         background: white;
+    }
+
+    &__links {
+        @include flex(column);
     }
 }

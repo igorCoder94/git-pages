@@ -4,6 +4,7 @@
 $font-family-uni-sans: 'Uni Sans';
 $font-family-inter: 'Inter';
 $font-family-segoe: 'Segoe UI', sans-serif;
+$font-family-roboto: 'Roboto', sans-serif;
 
 $color-bg-dark: #000625;
 $color-bg-gray: #F0F0F0;
@@ -14,6 +15,8 @@ $color-border-gray: #DBDEEC;
   --font-family-uni-sans: #{$font-family-uni-sans};
   --font-family-inter: #{$font-family-inter};
   --font-family-segoe: #{$font-family-segoe};
+  --font-family-roboto: #{$font-family-roboto};
+
 
   --color-bg-dark: #{$color-bg-dark};
   --color-bg-gray: #{$color-bg-gray};
@@ -165,4 +168,36 @@ section {
   @media (max-width: 1000px) {
     display: none;
   }
+}
+
+input[type="checkbox"] {
+  -webkit-appearance: none;
+  appearance: none;
+  background-color: #fff;
+  margin: 0;
+  font: inherit;
+  color: #D2DBE9;
+  width: 19px;
+  height: 19px;
+  border: 1px solid #D2DBE9;
+  border-radius: 0.15em;
+  transform: translateY(-0.075em);
+  display: grid;
+  place-content: center;
+  cursor: pointer;
+}
+
+input[type="checkbox"]::before {
+  position: absolute;
+  left: 3px;
+  top: -1px;
+  content: url(assets/icons/check.svg);
+  width: 9px;
+  height: 7px;
+  transform: scale(0);
+  transition: 120ms transform ease-in-out;
+}
+
+input[type="checkbox"]:checked::before {
+  transform: scale(1);
 }

@@ -1,13 +1,13 @@
 import './style.scss';
 import toir from '../../../assets/images/main/toir/toir.png';
-import scheme from '../../../assets/images/main/toir/scheme.png';
+import { ReactComponent as IconScheme } from '../../../assets/images/main/toir/scheme.svg';
 import form from '../../../assets/icons/pageMain/toir/form.svg';
 import ai from '../../../assets/icons/pageMain/toir/ai.svg';
 import map from '../../../assets/icons/pageMain/toir/map.svg';
 import table from '../../../assets/icons/pageMain/toir/table.svg';
 import settings from '../../../assets/icons/pageMain/toir/settings.svg';
 import folder from '../../../assets/icons/pageMain/toir/folder.svg';
-import Borders from '../../../shared';
+import Borders from '../../../shared/borders';
 
 const listOne = [
     {
@@ -50,7 +50,7 @@ const listTwo = [
 ];
 
 const Toir = () => {
-    return <section className='toir__section'>
+    return <section id='toir' className='toir__section'>
         <div className='toir__container container'>
             <div className='toir__left'>
                 <h2 className='toir__title'>
@@ -85,7 +85,7 @@ const Toir = () => {
                 </div>
             </div>
             <div className='toir__right'>
-                <img src={scheme} alt="scheme" />
+                <IconScheme className='scada__scheme' />
             </div>
             <Borders />
         </div>

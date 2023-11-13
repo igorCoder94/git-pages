@@ -1,0 +1,28 @@
+.border {
+    position: absolute;
+    top: 0;
+    height: 100%;
+    border-left: 1px dashed #DDE1EC;
+    z-index: -1;
+    opacity: .5;
+
+    &__left {
+        left: 0%;
+    }
+    
+    &__left-middle {
+        left: 25%;
+    }
+    
+    &__middle {
+        left: 50%;
+    }
+    
+    &__right-middle {
+        left: 75%;
+    }
+    
+    &__right {
+        right: 0%;
+    }
+}

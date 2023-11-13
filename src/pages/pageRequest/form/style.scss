@@ -1,0 +1,241 @@
+@import '../../../assets/styles/mixins/flex.scss';
+@import '../../../assets/styles/typography.scss';
+
+.react-tel-input .selected-flag {
+    display: none;
+}
+
+.flag-dropdown {
+    display: none
+}
+
+.react-tel-input .form-control {
+    font-family: var(--font-family-inter);
+    font-size: 16px !important;
+    height: 100% !important;
+    padding-left: 0 !important;
+    background: none !important;
+    border: none !important;
+}
+
+.react-tel-input {
+    margin-bottom: 0 !important;
+}
+
+.request-form {
+    &__section {
+        position: relative;
+        background: #F6F9FC;
+        z-index: 1;
+    }
+
+    &__container {
+        @include flex(column, flex-start, center, nowrap);
+    }
+
+    &__content {
+        margin-top: 136px;
+        border-radius: 8px;
+        padding: 40px 60px;
+        background: #FFF;
+        box-shadow: 0px 4px 10px 0px rgba(0, 8, 79, 0.25);
+        margin: 136px 0px 0;
+
+        @media (max-width: 1100px) {
+            margin-top: 0;
+        }
+
+        @media (max-width: 670px) {
+            padding: 40px 10px;
+        }
+    }
+
+    &__title {
+        color: #1A1F36;
+        font-size: 24px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: normal;
+        margin-bottom: 38px;
+    }
+
+    &__form {
+        width: 100%;
+    }
+
+    &__block-title {
+        color: #1A1F36;
+        font-size: 15px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: normal;
+        margin-bottom: 10px;
+
+        @media (max-width: 670px) {
+            font-size: 14px;
+        }
+    }
+
+    &__info {
+        color: #959EAD;
+        text-align: center;
+        font-size: 12px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        letter-spacing: 0.24px;
+    }
+
+    &__input {
+        border-radius: 4px;
+        background: #F6F7FA;
+        width: 100%;
+        padding: 17px 19px;
+        outline: none;
+    }
+
+    &__input-container {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    &__inputs {
+        @include flex(row, center, center, nowrap);
+        gap: 6px;
+        margin-bottom: 10px;
+
+        @media (max-width: 800px) {
+            flex-direction: column;
+        }
+    }
+
+    &__block {
+        margin-bottom: 45px;
+    }
+
+    &__bottom {
+        @include flex(column, flex-start, center, nowrap);
+    }
+
+    &__submit {
+        color: white;
+        background: black;
+        width: fit-content;
+        border-radius: 100px;
+        height: 34px;
+        padding: 0 74px;
+        cursor: pointer;
+        transition: all linear .2s;
+
+        &:hover {
+            opacity: .3;
+        }
+    }
+
+    &__error {
+        border: 1px solid red;
+    }
+
+    &__error-text {
+        margin-top: 10px;
+        color: red;
+        font-size: 12px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+    }
+
+    &__button {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        margin-bottom: 18px;
+    }
+
+    &__success {
+        margin-top: 10px;
+        color: green;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+    }
+
+    &__spinner {
+        margin-left: 10px;
+    }
+}
+
+.grid {
+    &__row {
+        display: grid;
+        grid-template-columns: 225px 1fr;
+        column-gap: 10px;
+        row-gap: 6px;
+
+        @media (max-width: 670px) {
+            grid-template-columns: .5fr 1fr;
+        }
+    }
+
+    &__item {
+        display: flex;
+        gap: 6px;
+        flex-direction: column;
+        margin-bottom: 10px;
+        padding: 15px 19px;
+        border-radius: 4px;
+        background: #F6F7FA;
+        color: var(--, #1A1F36);
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        letter-spacing: 0.28px;
+        border-radius: 4px;
+
+        @media (max-width: 670px) {
+            font-size: 12px;
+        }
+
+        @media (max-width: 420px) {
+            padding: 15px 0;
+        }
+    }
+
+    &__item:has(.grid__item-inner) {
+        background: none;
+        padding: 0;
+    }
+
+    &__item-inner-container {
+        display: flex;
+        justify-content: space-between;
+        height: 100%;
+        gap: 6px;
+        border-radius: 4px;
+    }
+
+    &__item-inner {
+        padding: 15px 19px;
+        display: flex;
+        width: 100%;
+        height: 100%;
+        border-radius: 4px;
+        background: #F6F7FA;
+
+        @media (max-width: 420px) {
+            padding: 15px 0;
+            justify-content: center;
+        }
+
+        &:last-child {
+            width: 58px;
+        }
+    }
+}
+
+.blocked {
+    opacity: .1;
+    pointer-events: none;
+}

@@ -5,8 +5,11 @@
     position: relative;
     top: 0;
     color: white;
-    font-family: var(--font-family-uni-sans);
-    @include text-18-22-600();
+    font-family: var(--font-family-roboto);
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
     @include flex(row, center, center);
     // margin-top: 30px;
     align-items: center;
@@ -18,6 +21,11 @@
 
     @media (max-width: 800px) {
         margin-top: 0;
+    }
+
+    &-light {
+        color: black;
+        background: white;
     }
 
     &__container {
@@ -36,6 +44,7 @@
     &__logo {
         @include flex();
         cursor: pointer;
+        margin-right: 30px;
 
         &--mobile {
             justify-self: flex-start
@@ -47,21 +56,31 @@
     }
 
     &__signin {
-        @include flex(row, flex-start);
-        gap: 10px;
+        @include flex(row, flex-start, center);
+        gap: 30px;
         cursor: pointer;
         transition: all linear .2s;
-
-        &:hover {
-            opacity: .5;
-        }
     }
 
     &-nav {
         @include flex(row, space-between);
         gap: 30px;
+        margin-right: 80px;
 
         &__link {
+            transition: all linear .2s;
+
+            &:hover {
+                opacity: .5;
+            }
+        }
+
+        &__connect {
+            @include flex(column, center);
+            border-radius: 100px;
+            background: rgba(255, 255, 255, 0.20);
+            height: 36px;
+            padding: 0 14px;
             transition: all linear .2s;
 
             &:hover {

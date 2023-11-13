@@ -1,10 +1,10 @@
 import './style.scss';
 import control from '../../../assets/images/main/control/control.png';
-import scheme from '../../../assets/images/main/control/scheme.png';
+import { ReactComponent as IconScheme} from '../../../assets/images/main/control/scheme.svg';
 import map from '../../../assets/icons/pageMain/control/map.svg';
 import pc from '../../../assets/icons/pageMain/control/pc.svg';
 import form from '../../../assets/icons/pageMain/control/form.svg';
-import Borders from '../../../shared';
+import Borders from '../../../shared/borders';
 
 const listOne = [
     {
@@ -28,7 +28,7 @@ const listOne = [
 ];
 
 const Control = () => {
-    return <section className='control__section'>
+    return <section id='control' className='control__section'>
         <div className='control__container container'>
             <div className='control__left'>
                 <h2 className='control__title'>
@@ -49,7 +49,7 @@ const Control = () => {
                 </div>
             </div>
             <div className='control__right'>
-                <img src={scheme} alt="scheme" />
+                <IconScheme className='scada__scheme' />
             </div>
             <Borders />
         </div>

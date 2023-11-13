@@ -1,15 +1,14 @@
 import './style.scss';
 import integration from '../../../assets/images/main/integration/integration.png';
-import scheme from '../../../assets/images/main/integration/scheme.png';
+import {ReactComponent as IconScheme } from '../../../assets/images/main/integration/scheme.svg';
 import modules from '../../../assets/icons/pageMain/integration/modules.svg';
-
 import build from '../../../assets/icons/pageMain/integration/build.svg';
 import table from '../../../assets/icons/pageMain/integration/table.svg';
 import graphic from '../../../assets/icons/pageMain/integration/graphic.svg';
 import video from '../../../assets/icons/pageMain/integration/video.svg';
 
 
-import Borders from '../../../shared';
+import Borders from '../../../shared/borders';
 
 const listOne = [
     {
@@ -44,7 +43,7 @@ const listTwo = [
 ];
 
 const Integration = () => {
-    return <section className='integration__section'>
+    return <section id='integration' className='integration__section'>
         <div className='integration__container container'>
             <div className='integration__left'>
                 <h2 className='integration__title'>
@@ -79,7 +78,7 @@ const Integration = () => {
                 </div>
             </div>
             <div className='integration__right'>
-                <img src={scheme} alt="scheme" />
+                <IconScheme className='scada__scheme' />
             </div>
             <Borders />
         </div>
