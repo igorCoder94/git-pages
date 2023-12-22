@@ -9,6 +9,10 @@
     display: none
 }
 
+.react-tel-input {
+    min-width: 100% !important;
+}
+
 .react-tel-input .form-control {
     font-family: var(--font-family-inter);
     font-size: 16px !important;
@@ -66,6 +70,17 @@
         border-radius: 4px;
         background: #F6F7FA;
         width: 100%;
+        max-height: 54px;
+        padding: 17px 19px;
+        outline: none;
+    }
+
+    &__phone {
+        background-color: #F6F7FA;
+        margin-bottom: 10px;
+        border-radius: 4px;
+        background: #F6F7FA;
+        width: 100px;
         max-height: 54px;
         padding: 17px 19px;
         outline: none;

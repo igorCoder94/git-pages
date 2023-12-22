@@ -9,9 +9,15 @@ import HeroMobile from './hero-mobile';
 import { useMediaQuery } from '@react-hook/media-query';
 import { Helmet } from 'react-helmet';
 import Integration from './integration';
+import { useEffect } from 'react';
 
-const PageMain = () => {
-    const isMobile = useMediaQuery('(max-width: 800px)');
+
+const PageMain = ({ togglePopup }) => {
+    const isMobile = useMediaQuery('(max-width: 1100px)');
+
+    useEffect(() => {
+        console.log(2, togglePopup);
+    }, []);
 
     return (
         <>
@@ -24,11 +30,11 @@ const PageMain = () => {
             <Hero />
             <Scada />
             <Toir />
-            <Integration />
             <Control />
+            <Integration />
             <News />
             <NewsCards />
-            <Join />
+            <Join togglePopup={togglePopup} />
         </>
     )
 }

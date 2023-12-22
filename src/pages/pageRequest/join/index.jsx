@@ -21,7 +21,11 @@ const Join = () => {
                     <div className='request-join__text'>
                         Вы можете для начала ознакомиться с нашей презентацией.
                     </div>
-                    <a className='join__text join__link' href="/Unios. Презентация 26.09.23.pdf" download>Скачать презентацию ></a>
+                    <div className='join__links'>
+                        {/* <a className='join__text join__link' href="/Функциональные характеристики.pdf" download>Функциональные требования ></a> */}
+                        {/* <a className='join__text join__link' href="/Руководство пользователя.pdf" download>Руководство по эксплуатации ></a> */}
+                        <a className='join__text join__link' href="/Unios. Презентация 26.09.23.pdf" download>Презентация ></a>
+                    </div>
                 </div>
                 <div className='request-join__doc request-join__yellow'>
                     <img className='request-join__img' src={yellowDoc} alt="" />

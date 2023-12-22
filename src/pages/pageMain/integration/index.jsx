@@ -6,6 +6,7 @@ import build from '../../../assets/icons/pageMain/integration/build.svg';
 import table from '../../../assets/icons/pageMain/integration/table.svg';
 import graphic from '../../../assets/icons/pageMain/integration/graphic.svg';
 import video from '../../../assets/icons/pageMain/integration/video.svg';
+import { useMediaQuery } from '@react-hook/media-query';
 
 
 import Borders from '../../../shared/borders';
@@ -13,8 +14,8 @@ import Borders from '../../../shared/borders';
 const listOne = [
     {
         id: 0,
-        title: 'Панель мониторинга',
-        text: 'Сбор и интерпретация информации с различных устройств и систем',
+        title: 'Внешние модули',
+        text: 'Расширение функционала дополнительными внешними модулями и сервисами внешних систем',
         icon: modules,
     },
 ];
@@ -27,29 +28,35 @@ const listTwo = [
     },
     {
         id: 1,
-        title: 'Интеграция с системами электронного документооборота',
+        title: 'Системы электронного документооборота (СЭД)',
         icon: table,
     },
     {
         id: 2,
-        title: 'Построение гибких Бизнес Процессов',
+        title: 'Business Process Management',
         icon: graphic,
     },
     {
         id: 3,
-        title: 'Интеграция с системами электронного документооборота',
+        title: 'CCTV Промышленная видеоаналитика, определение аварийных ситуаций',
         icon: video,
     },
 ];
 
 const Integration = () => {
+    const isMobile = useMediaQuery('(max-width: 1100px)');
+
     return <section id='integration' className='integration__section'>
         <div className='integration__container container'>
-            <div className='integration__left'>
-                <h2 className='integration__title'>
+            { isMobile ? <h2 className='integration__title-mobile'>
                     <div>Unios</div>
                     <div>Интеграция</div>
-                </h2>
+                </h2> : null }
+            <div className='integration__left'>
+                { !isMobile ? <h2 className='integration__title'>
+                    <div>Unios</div>
+                    <div>Интеграция</div>
+                </h2> : null }
                 <img className='integration__img' src={integration} alt="integration" />
                 <div className='integration__block'>
                     { listOne.map((item) => (<>
@@ -62,21 +69,39 @@ const Integration = () => {
                         </div>
                     </>) ) }
                 </div>
-                <h3 className='integration__title'>
-                    Опционально подключаемые модули
-                </h3>
-                <div className='integration__block'>
-                    { listTwo.map((item) => (<>
-                        <div className='integration__el'>
-                            <img className='integration__el-icon' src={item.icon} alt={item.title} />
-                            <div className='integration__el-text'>
-                                <div className='integration__el-title'>{item.title}</div>
-                                <div className='integration__el-description'>{item.text}</div>
+                { !isMobile ? <>
+                    <h3 className='integration__title'>
+                        Опционально подключаемые модули
+                    </h3>
+                    <div className='integration__block'>
+                        { listTwo.map((item) => (<>
+                            <div className='integration__el'>
+                                <img className='integration__el-icon' src={item.icon} alt={item.title} />
+                                <div className='integration__el-text'>
+                                    <div className='integration__el-title'>{item.title}</div>
+                                    <div className='integration__el-description'>{item.text}</div>
+                                </div>
                             </div>
-                        </div>
-                    </>) ) }
-                </div>
+                        </>) ) }
+                    </div>
+                </> : null }
             </div>
+            { isMobile ? <>
+                    <h3 className='integration__title-mobile'>
+                        Опционально подключаемые модули
+                    </h3>
+                    <div className='integration__block-mobile integration__block'>
+                        { listTwo.map((item) => (<>
+                            <div className='integration__el'>
+                                <img className='integration__el-icon' src={item.icon} alt={item.title} />
+                                <div className='integration__el-text'>
+                                    <div className='integration__el-title'>{item.title}</div>
+                                    <div className='integration__el-description'>{item.text}</div>
+                                </div>
+                            </div>
+                        </>) ) }
+                    </div>
+                </> : null }
             <div className='integration__right'>
                 <IconScheme className='scada__scheme' />
             </div>

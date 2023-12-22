@@ -19,9 +19,9 @@ function App() {
   function chooseBackgroundClass() {
     switch (location.pathname) {
       case '/':
-        return 'background-main';
+        return 'background__main';
       default:
-        return 'background-dark';
+        return 'background__dark';
     }
   }
 
@@ -61,11 +61,10 @@ function App() {
   return (
     <div className="App">
       <div id='App__container' className={`App__container ${chooseBackgroundClass()}`}>
-        <Menu open={isMenuOpen} toggleMenu={toggleMenu} togglePopup={togglePopup}/>
-        <Header toggleMenu={toggleMenu} togglePopup={togglePopup} />
+        <Header toggleMenu={toggleMenu} togglePopup={togglePopup} isMenuOpen={isMenuOpen}/>
         <main>
           <Routes>
-            <Route path="/" element={<PageMain />} ></Route>
+            <Route path="/" element={<PageMain togglePopup={togglePopup} />} ></Route>
             <Route path="/request" element={<PageRequest />} ></Route>
             <Route path="/dispatching" element={<PageDispatching />} ></Route>
           </Routes>
@@ -74,6 +73,7 @@ function App() {
       </div>
       {isMenuOpen ? <div className='overlay-dark'></div> : null}
       {isPopupOpen ? <ConnectUs togglePopup={togglePopup} /> : null}
+      <Menu open={isMenuOpen} toggleMenu={toggleMenu}/>
     </div>
   );
 }

@@ -6,12 +6,14 @@ import { ReactComponent as IconLogoDark } from '../../assets/icons/logo-dark.svg
 import { ReactComponent as IconLogoMobile } from '../../assets/icons/logo-mobile.svg';
 import { ReactComponent as IconLogoMobileBlack } from "../../assets/icons/logo-mobile-black.svg";
 import { ReactComponent as IconBurger } from '../../assets/icons/burger.svg';
+import { ReactComponent as IconConnect } from '../../assets/icons/connect-mobile.svg';
+import { ReactComponent as IconConnectBlack } from '../../assets/icons/connect-mobile-black.svg';
 import { ReactComponent as IconBurgerBlack} from '../../assets/icons/burger-black.svg';
 import { useMediaQuery } from '@react-hook/media-query';
 import { useLocation } from 'react-router-dom';
 
-const Header = ({ toggleMenu, togglePopup }) => {
-    const isMobile = useMediaQuery('(max-width: 1100px)');
+const Header = ({ toggleMenu, togglePopup, isMenuOpen }) => {
+    const isMobile = useMediaQuery('(max-width: 1142px)');
     const location = useLocation();
 
     function openMenu() {
@@ -50,14 +52,23 @@ const Header = ({ toggleMenu, togglePopup }) => {
             <div className={`header__container ${chooseBackgroundClass()}`}>
                 {isMobile ?
                     <div className='header__burger'>
-                        { chooseBackgroundClass() === 'header-main' ? <IconBurger className='header__burger-icon' onClick={openMenu} /> : 
-                        <IconBurgerBlack className='header__burger-icon' onClick={openMenu} /> }
-                        <span className='header__border'></span>
                         <Link className='header__logo-container' to='/'>
-                            { chooseBackgroundClass() === 'header-main' ? <IconLogoMobile className='header__logo header__logo--mobile' /> :
-                                <IconLogoMobileBlack className='header__logo header__logo--mobile' />
+                            { chooseBackgroundClass() === 'header-main' ? <IconLogoMobile className={`header__logo header__logo--mobile 
+                            ${isMenuOpen ? 'header__transform' : ''}`} /> :
+                                <IconLogoMobileBlack className={`header__logo header__logo--mobile 
+                                ${isMenuOpen ? 'header__transform' : ''}`} />
                             }
                         </Link>
+                        { chooseBackgroundClass() === 'header-main' ? 
+                        <div className='header__icons'>
+                            <IconConnect className='header__burger-icon'onClick={openPopup} />
+                            <IconBurger className='header__burger-icon' onClick={openMenu} />
+                        </div>
+                         : 
+                         <div className='header__icons'>
+                            <IconConnectBlack className='header__burger-icon'onClick={openPopup} />
+                            <IconBurgerBlack className='header__burger-icon' onClick={openMenu} />
+                        </div> }
                     </div>
                     :
                     null}

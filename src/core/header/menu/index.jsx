@@ -9,7 +9,7 @@ import { useLocation } from "react-router-dom";
 
 // import { useOnClickOutside } from "../../hooks";
 
-const Menu = ({ open, toggleMenu, togglePopup }) => {
+const Menu = ({ open, toggleMenu }) => {
     const node = useRef(null);
     const toCloseMenu = true;
     const location = useLocation();
@@ -39,13 +39,8 @@ const Menu = ({ open, toggleMenu, togglePopup }) => {
         }
     }
 
-    function openPopup() {
-        close();
-        togglePopup();
-    }
-
     return (
-        <div ref={node}>
+        <div className='test' ref={node}>
             <div className={`menu__container ${open ? 'menu__container--opened' : ''}`}>
                 <div className='menu__header'>
                     <IconClose className='menu__close' onClick={() => close()} />
@@ -60,7 +55,6 @@ const Menu = ({ open, toggleMenu, togglePopup }) => {
                     <Link className='menu__link' to='#control' onClick={() => close('control')}>Контроль<IconArrow /></Link>
                     <Link className='menu__link' to='#news' onClick={() => close('news')}>Новости<IconArrow /></Link>
                     <Link className='menu__link' to='#footer' onClick={() => close('footer')}>Контакты<IconArrow /></Link>
-                    <Link className='menu__link' onClick={openPopup}>Связаться с нами<IconArrow /></Link>
                 </div>
             </div>
         </div >

@@ -64,12 +64,14 @@
         font-style: normal;
         font-weight: 400;
         line-height: normal;
-        margin-bottom: 24px;
+        margin-bottom: 14px;
     }
 
     &__link {
+        font-size: 15px;
         color: #0063E7;
-        font-weight: 700;
+        font-weight: 600;
+        line-height: 18px;
         transition: .2s;
 
         &:hover {
@@ -84,5 +86,9 @@
         width: 105%;
         height: 315px;
         background: white;
+    }
+
+    &__links {
+        @include flex(column);
     }
 }

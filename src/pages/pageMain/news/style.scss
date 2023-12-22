@@ -27,7 +27,7 @@
         font-family: var(--font-family-inter);
         font-weight: 700;
         line-height: normal;
-        margin-bottom: 100px;
+        margin-bottom: 40px;
     }
 
     &__subtitle {
@@ -69,6 +69,7 @@
 
         @media (max-width: 800px) {
             @include flex(column-reverse, flex-start, center, nowrap);
+            padding-top: 0;
         }
     }
 

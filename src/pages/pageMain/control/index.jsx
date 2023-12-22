@@ -5,36 +5,40 @@ import map from '../../../assets/icons/pageMain/control/map.svg';
 import pc from '../../../assets/icons/pageMain/control/pc.svg';
 import form from '../../../assets/icons/pageMain/control/form.svg';
 import Borders from '../../../shared/borders';
+import { useMediaQuery } from '@react-hook/media-query';
 
 const listOne = [
     {
         id: 0,
-        title: 'Панель мониторинга',
-        text: 'Сбор и интерпретация информации с различных устройств и систем',
+        title: 'Мобильные рабочие места основные рабочие места исполнителя',
         icon: pc,
     },
     {
         id: 1,
-        title: 'AI прогноз',
-        text: 'Предиктивная и статистическая аналитика о состоянии систем',
+        title: 'Оперативная постановка работ Исполнителям онлайн с документацией и навигацией до устройств',
         icon: map,
     },
     {
         id: 2,
-        title: 'Умное оповещение',
-        text: 'Прогноз и оповещение об аварийных ситуациях в различные каналы',
+        title: 'Онлайн-контроль выполнения работ Исполнителем с фото и видеофиксацией действий',
         icon: form,
     },
 ];
 
 const Control = () => {
+    const isMobile = useMediaQuery('(max-width: 1100px)');
+
     return <section id='control' className='control__section'>
         <div className='control__container container'>
-            <div className='control__left'>
-                <h2 className='control__title'>
+            { isMobile ? <h2 className='control__title-mobile'>
                     <div>Unios</div>
                     <div>Контроль исполнения</div>
-                </h2>
+                </h2> : null }
+            <div className='control__left'>
+                { !isMobile ? <h2 className='control__title'>
+                    <div>Unios</div>
+                    <div>Контроль исполнения</div>
+                </h2> : null }
                 <img className='control__img' src={control} alt="control" />
                 <div className='control__block'>
                     { listOne.map((item) => (<>

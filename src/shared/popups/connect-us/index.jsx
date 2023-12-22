@@ -118,7 +118,7 @@ const ConnectUs = ({ togglePopup }) => {
                         <PhoneInput 
                             onlyCountries={['ru']}
                             country={'ru'}
-                            className={`connect-us__input ${ errors.телефон ? 'connect-us__error' : ''}`}
+                            className={`connect-us__phone ${ errors.телефон ? 'connect-us__error' : ''}`}
                             name="телефон"
                             value={formData.телефон}
                             onChange={(phone) => setFormData((prevFormData) => ({ ...prevFormData, телефон: phone }))}
