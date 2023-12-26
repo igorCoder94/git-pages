@@ -30,6 +30,7 @@
     }
 
     &__container {
+        position: relative;
         @include flex(column, flex-start, center, nowrap);
     }
 
@@ -47,6 +48,8 @@
 
         @media (max-width: 670px) {
             padding: 40px 10px;
+            width: 100vw;
+            border-radius: 0;
         }
     }
 
@@ -199,7 +202,8 @@
         }
 
         @media (max-width: 420px) {
-            padding: 15px 0;
+            font-size: 8px;
+            padding: 15px 5px;
         }
     }
 
@@ -219,19 +223,57 @@
     &__item-inner {
         padding: 15px 19px;
         display: flex;
+        flex-direction: column;
         width: 100%;
         height: 100%;
         border-radius: 4px;
         background: #F6F7FA;
 
         @media (max-width: 420px) {
-            padding: 15px 0;
+            padding: 15px 15px;
             justify-content: center;
         }
 
         &:last-child {
             width: 58px;
         }
+    }
+
+    &__item-cost {
+        @include flex(row, space-between, center, nowrap);
+        padding: 6px 20px;
+        color: #0063E7;
+        font-size: 11px;
+        font-weight: 300;
+        line-height: normal;
+        letter-spacing: 0.22px;
+    }
+
+    &__item-inner-list {
+        display: flex;
+        flex-direction: column; 
+        gap: 6px;
+        width: 100%;
+    }
+
+    &__item-inner-list &__item-inner {
+        width: 100%;
+    }
+
+    &__item-header {
+        padding: 6px 20px;
+        color: #1A1F36;
+        background: #E9F1FA;
+        font-size: 14px;
+        font-weight: 600;
+        line-height: normal;
+        letter-spacing: 0.28px;
+        margin-bottom: 0;
+    }
+
+    &__item-name {
+        background: #E9F1FA;
+        font-weight: 600;
     }
 }
 

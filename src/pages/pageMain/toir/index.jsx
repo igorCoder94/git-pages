@@ -12,9 +12,10 @@ import Borders from '../../../shared/borders';
 import { useMediaQuery } from '@react-hook/media-query';
 
 const listOne = [
+    
     {
         id: 0,
-        title: 'Формирование подконтрольной среды',
+        title: 'Менеджер бизнес-процессов',
         text: 'Индивидуальная настройка Объектов / Устройств / Пользователей',
         icon: form,
     },
@@ -40,20 +41,15 @@ const listOne = [
 
 const listTwo = [
     {
-        id: 0,
-        title: 'Менеджер бизнес-процессов',
-        icon: settings,
+        id: 2,
+        title: 'Интерактивные карты BIM',
+        text: '3D Планы расположения устройств на объекте',
+        icon: d3,
     },
     {
         id: 1,
         title: 'Интеграция с системами электронного документооборота (1:С)',
         icon: table,
-    },
-    {
-        id: 2,
-        title: 'Интерактивные карты (Building Information Model)',
-        text: '3D Планы расположения устройств на объекте',
-        icon: d3,
     },
 ];
 
@@ -73,7 +69,7 @@ const Toir = () => {
                 </h2> : null }
                 <img className='scada__img' src={toir} alt="toir" />
                 <div className='toir__block'>
-                    { listOne.map((item) => (<>
+                    { listOne.map((item) => (<div key={item.id}>
                         <div className='toir__el'>
                             <img className='toir__el-icon' src={item.icon} alt={item.title} />
                             <div className='toir__el-text'>
@@ -81,14 +77,14 @@ const Toir = () => {
                                 <div className='toir__el-description'>{item.text}</div>
                             </div>
                         </div>
-                    </>) ) }
+                    </div>) ) }
                 </div>
                 { !isMobile ? <>
                     <h3 className='toir__title'>
                         Опционально подключаемые модули
                     </h3>
                     <div className='toir__block'>
-                        { listTwo.map((item) => (<>
+                        { listTwo.map((item) => (<div key={item.id}>
                             <div className='toir__el'>
                                 <img className='toir__el-icon' src={item.icon} alt={item.title} />
                                 <div className='toir__el-text'>
@@ -96,7 +92,7 @@ const Toir = () => {
                                     <div className='toir__el-description'>{item.text}</div>
                                 </div>
                             </div>
-                        </>) ) }
+                        </div>) ) }
                     </div>
                 </> : null }
             </div>
@@ -105,7 +101,7 @@ const Toir = () => {
                         Опционально подключаемые модули
                     </h3>
                     <div className='toir__block toir__block-mobile'>
-                        { listTwo.map((item) => (<>
+                        { listTwo.map((item) => (<div key={item.id}>
                             <div className='toir__el'>
                                 <img className='toir__el-icon' src={item.icon} alt={item.title} />
                                 <div className='toir__el-text'>
@@ -113,11 +109,11 @@ const Toir = () => {
                                     <div className='toir__el-description'>{item.text}</div>
                                 </div>
                             </div>
-                        </>) ) }
+                        </div>) ) }
                     </div>
                 </> : null }
             <div className='toir__right'>
-                <IconScheme className='scada__scheme' />
+                <IconScheme className='toir__scheme' />
             </div>
             <Borders />
         </div>

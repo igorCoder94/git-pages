@@ -69,8 +69,6 @@ const ConnectUs = ({ togglePopup }) => {
 
     const handleChange = (event) => {
         const { name, value, type, checked } = event.target;
-
-        console.log(type, name, value);
         type === "checkbox" ? setFormData((prevFormData) => ({ ...prevFormData, [name]: checked }))
          : setFormData((prevFormData) => ({ ...prevFormData, [name]: value }))
     };
@@ -88,9 +86,11 @@ const ConnectUs = ({ togglePopup }) => {
                 closePopup();
             }, 3000);
         })
-        .catch(() => {
+        .catch((e) => {
             setLoading(false);
-            setErrors({fail: 'Что-то пошло не так. Повторите попытку позже.'})});
+            setErrors({fail: 'Что-то пошло не так. Повторите попытку позже.'})
+            console.error(e);
+        });
     };
 
     useEffect(() => {

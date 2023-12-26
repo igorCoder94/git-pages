@@ -98,10 +98,10 @@
             width: 40px;
             height: 40px;
         }
+    }
 
-        &:last-child {
-            margin-bottom: 0;
-        }
+    div:last-child > &__el {
+        margin-bottom: 0;
     }
 
     &__right img{

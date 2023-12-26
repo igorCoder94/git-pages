@@ -3,7 +3,6 @@ import eagleColored from '../../../assets/icons/pageMain/hero/eagle-colored.svg'
 import gazprom from '../../../assets/icons/pageMain/hero/gazprom.svg';
 import gazpromOil from '../../../assets/icons/pageMain/hero/gazprom-oil.svg'
 import oneC from '../../../assets/icons/pageMain/hero/1c.svg'
-import gov from '../../../assets/icons/pageMain/hero/gov.svg'
 import { ReactComponent as IconGov } from '../../../assets/icons/pageMain/hero/gov.svg';
 import { ReactComponent as IconEagleMobile } from '../../../assets/icons/pageMain/hero/eagle-mobile.svg';
 import { Swiper, SwiperSlide } from 'swiper/react';
@@ -21,6 +20,7 @@ import { useMediaQuery } from '@react-hook/media-query';
 import 'swiper/css/pagination';
 import 'swiper/css/effect-fade';
 import 'swiper/css';
+import Borders from '../../../shared/borders';
 
 const Hero = () => {
     const isTablet = useMediaQuery('(max-width: 1100px)');
@@ -32,7 +32,6 @@ const Hero = () => {
                     fadeEffect={{ crossFade: true }}
                     spaceBetween={50}
                     slidesPerView={1}
-                    onSlideChange={() => console.log('slide change')}
                     navigation
                     pagination={{
                         clickable: true,
@@ -45,7 +44,6 @@ const Hero = () => {
                     speed='500'
                     scrollbar={{ draggable: true }}
                     modules={[EffectFade, Pagination, Autoplay]}
-                    onSwiper={(swiper) => console.log(swiper)}
                 >
                         <SwiperSlide>
                             <div className='hero__top'>
@@ -191,12 +189,12 @@ const Hero = () => {
             </div> : 
             <div className='hero__partners-mobile'>
                 <div className='hero__partners-line'>
-                    <img class='hero__partners-icon' src={gazprom} alt="" />
-                    <img class='hero__partners-icon' src={gazpromOil} alt="" />
+                    <img className='hero__partners-icon' src={gazprom} alt="" />
+                    <img className='hero__partners-icon' src={gazpromOil} alt="" />
                 </div>
                 <div className='hero__partners-line'>
-                    <img class='hero__partners-icon' src={oneC} alt="" />
-                    <IconGov class='hero__partners-icon' />
+                    <img className='hero__partners-icon' src={oneC} alt="" />
+                    <IconGov className='hero__partners-icon' />
                 </div>
             </div>
             }
@@ -215,19 +213,10 @@ const Hero = () => {
                 <div className='hero__info-descripton-mobile'>
                     Сервис UNIOS является отечественным решением диспетчеризации и мониторинга оборудования на промышленных объектах в России.
                 </div>
-            </div> 
+            </div>  
             }
-            
-        </div>
-        <div className="background-container">
-            <div className="tr-one"></div>
-            <div className="tr-two"></div>
-        </div>
-        <div className='background'>
-            <div className='tr-white__container'>
-                <div className="tr-white"></div>
-            </div>            
-            <div className='borders-inner'></div>
+
+            <Borders />    
         </div>
     </section>
 }

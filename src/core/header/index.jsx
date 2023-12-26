@@ -11,6 +11,7 @@ import { ReactComponent as IconConnectBlack } from '../../assets/icons/connect-m
 import { ReactComponent as IconBurgerBlack} from '../../assets/icons/burger-black.svg';
 import { useMediaQuery } from '@react-hook/media-query';
 import { useLocation } from 'react-router-dom';
+import Borders from '../../shared/borders';
 
 const Header = ({ toggleMenu, togglePopup, isMenuOpen }) => {
     const isMobile = useMediaQuery('(max-width: 1142px)');
@@ -48,8 +49,8 @@ const Header = ({ toggleMenu, togglePopup, isMenuOpen }) => {
     }
 
     return (
-        <div className='header'>
-            <div className={`header__container ${chooseBackgroundClass()}`}>
+        <div className={`header ${chooseBackgroundClass()}`}>
+            <div className={`header__container`}>
                 {isMobile ?
                     <div className='header__burger'>
                         <Link className='header__logo-container' to='/'>
@@ -87,6 +88,7 @@ const Header = ({ toggleMenu, togglePopup, isMenuOpen }) => {
                     {!isMobile ? <Link className='header-nav__link' onClick={() => scrollTo('footer')} to='/#footer'>Контакты</Link> : null}
                     {!isMobile ? <span className='header-nav__connect' onClick={openPopup}>Связаться с нами</span> : null}
                 </div>
+                { location.pathname !== '/' ? <Borders /> : null }
             </div>
         </div >
     )

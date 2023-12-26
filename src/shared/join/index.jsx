@@ -1,15 +1,23 @@
-import Borders from '../../../shared/borders';
-import blueDoc from '../../../assets/icons/pageMain/join/page-blue.svg';
-import yellowDoc from '../../../assets/icons/pageMain/join/page-yellow.svg';
-import { Link } from 'react-router-dom';
+import Borders from '../borders';
+import blueDoc from '../../assets/icons/pageMain/join/page-blue.svg';
+import yellowDoc from '../../assets/icons/pageMain/join/page-yellow.svg';
+import { Link, useLocation } from 'react-router-dom';
 import './style.scss';
+import { useEffect, useState } from 'react';
 
 const Join = ({ togglePopup }) => {
-
+    const [showJob, setShowJob] = useState(true);
+    const location = useLocation();
 
     function openPopup() {
         togglePopup();
     }
+
+    useEffect(() => {
+        if (location.pathname.includes('request')) {
+            setShowJob(false);
+        }
+    }, []);
 
     return <section className='join__section'>
         <div className='join__container container'>
@@ -27,7 +35,7 @@ const Join = ({ togglePopup }) => {
                     </div>
                 </div>
             </div>
-            <div className='join__docs'>
+            { showJob ? <div className='join__docs'>
                 <div className='join__doc join__yellow'>
                     <img className='join__img' src={yellowDoc} alt="" />
                     <h3 className='join__title'>Начните работу</h3>
@@ -42,7 +50,7 @@ const Join = ({ togglePopup }) => {
                         <div onClick={openPopup} className='join__text join__link'> Связаться с нами ></div>
                     </div>
                 </div>
-            </div>
+            </div> : null }
             <Borders />
         </div>
         <div className='join__rectangle'></div>

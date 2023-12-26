@@ -14,31 +14,31 @@ import Borders from '../../../shared/borders';
 const listOne = [
     {
         id: 0,
-        title: 'Внешние модули',
-        text: 'Расширение функционала дополнительными внешними модулями и сервисами внешних систем',
+        title: 'Подключаемые внешние модули ',
+        text: 'Расширение функционала дополнительными модулями и сервисами внешних систем',
         icon: modules,
     },
 ];
 
 const listTwo = [
     {
+        id: 2,
+        title: 'Интерактивные карты BIM',
+        icon: graphic,
+    },
+    {
         id: 0,
-        title: 'Построение гибких Бизнес Процессов',
+        title: 'Построение гибких Бизнес Процессов BPM',
         icon: build,
     },
     {
         id: 1,
-        title: 'Системы электронного документооборота (СЭД)',
+        title: 'Системы электронного документооборота СЭД',
         icon: table,
     },
     {
-        id: 2,
-        title: 'Business Process Management',
-        icon: graphic,
-    },
-    {
         id: 3,
-        title: 'CCTV Промышленная видеоаналитика, определение аварийных ситуаций',
+        title: 'Промышленная видеоаналитика CCTV',
         icon: video,
     },
 ];
@@ -59,7 +59,7 @@ const Integration = () => {
                 </h2> : null }
                 <img className='integration__img' src={integration} alt="integration" />
                 <div className='integration__block'>
-                    { listOne.map((item) => (<>
+                    { listOne.map((item) => (<div key={item.id}>
                         <div className='integration__el'>
                             <img className='integration__el-icon' src={item.icon} alt={item.title} />
                             <div className='integration__el-text'>
@@ -67,14 +67,14 @@ const Integration = () => {
                                 <div className='integration__el-description'>{item.text}</div>
                             </div>
                         </div>
-                    </>) ) }
+                    </div>) ) }
                 </div>
                 { !isMobile ? <>
                     <h3 className='integration__title'>
                         Опционально подключаемые модули
                     </h3>
                     <div className='integration__block'>
-                        { listTwo.map((item) => (<>
+                        { listTwo.map((item) => (<div key={item.id}>
                             <div className='integration__el'>
                                 <img className='integration__el-icon' src={item.icon} alt={item.title} />
                                 <div className='integration__el-text'>
@@ -82,7 +82,7 @@ const Integration = () => {
                                     <div className='integration__el-description'>{item.text}</div>
                                 </div>
                             </div>
-                        </>) ) }
+                        </div>) ) }
                     </div>
                 </> : null }
             </div>
@@ -91,19 +91,19 @@ const Integration = () => {
                         Опционально подключаемые модули
                     </h3>
                     <div className='integration__block-mobile integration__block'>
-                        { listTwo.map((item) => (<>
-                            <div className='integration__el'>
+                        { listTwo.map((item) => (<div key={item.id}>
+                            <div className='integration__el' key={item.id}>
                                 <img className='integration__el-icon' src={item.icon} alt={item.title} />
                                 <div className='integration__el-text'>
                                     <div className='integration__el-title'>{item.title}</div>
                                     <div className='integration__el-description'>{item.text}</div>
                                 </div>
                             </div>
-                        </>) ) }
+                        </div>) ) }
                     </div>
                 </> : null }
             <div className='integration__right'>
-                <IconScheme className='scada__scheme' />
+                <IconScheme className='integration__scheme' />
             </div>
             <Borders />
         </div>

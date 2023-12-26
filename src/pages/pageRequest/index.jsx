@@ -1,6 +1,6 @@
 import './style.scss';
 import Form from './form';
-import Join from './join';
+import Join from '../../shared/join';
 import { Helmet } from 'react-helmet';
 
 const PageRequest = () => {

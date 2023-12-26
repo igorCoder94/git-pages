@@ -10,7 +10,11 @@
 }
 
 .react-tel-input {
-    min-width: 100% !important;
+    @media (max-width: 800px) {
+        min-width: 100% !important;
+        max-width: 100% !important;
+        width: 0 !important;
+    }
 }
 
 .react-tel-input .form-control {
@@ -22,6 +26,8 @@
 
     @media (max-width: 800px) {
         margin-bottom: 10px !important;
+        min-width: 100% !important;
+        max-width: 100% !important;
     }
 }
 
@@ -35,7 +41,6 @@
     left: 0;
     z-index: 10000;
     background-color: rgba(black ,0.4);
-    overflow: hidden;
 
     &__container {
         position: relative;
@@ -43,8 +48,10 @@
         padding: 40px 60px;
         max-width: 826px;
         height: fit-content;
+        max-height: 80vh;
         background: #FFF;
         border-radius: 4px;
+        overflow: auto;
 
         @media (max-width: 850px) {
             margin: 0 10px;

@@ -15,26 +15,26 @@ const listOne = [
     {
         id: 0,
         title: 'Диспетчеризация SCADA/IoT',
-        text: 'Универсальный интегратор SCADA систем',
+        text: 'Универсальный интегратор SCADA систем (MB RTU, OPC и др.)',
         icon: hub,
     },
     {
         id: 1,
-        title: 'Интерактивные карты',
-        text: '2D планы расположения устройств на объекте',
-        icon: ai,
+        title: 'Мониторинг',
+        text: 'Панель мониторинга и оповещений',
+        icon: smart,
     },
     {
         id: 2,
-        title: 'Интерпритация',
-        text: 'Графический анализ данных',
+        title: 'Аналитика данных',
+        text: 'Графическая интерпретация событий',
         icon: report,
     },
     {
         id: 3,
-        title: 'Мониторинг',
-        text: 'Панель мониторинга и оповещений. Представление данных в едином виде',
-        icon: smart,
+        title: 'Интерактивные карты',
+        text: '2D планы расположения устройств на объекте',
+        icon: ai,
     },
 ];
 
@@ -53,7 +53,7 @@ const listTwo = [
     },
     {
         id: 3,
-        title: 'Интерактивные карты (Building Information Model)',
+        title: 'Интерактивные карты',
         text: '3D Планы расположения устройств на объекте',
         icon: table,
     },
@@ -76,7 +76,7 @@ const Services = () => {
                 </h2> : null }
                 <img className='scada__img' src={scada} alt="scada" />
                 <div className='scada__block'>
-                    { listOne.map((item) => (<>
+                    { listOne.map((item) => (<div key={item.id}>
                         <div className='scada__el'>
                             <img className='scada__el-icon' src={item.icon} alt={item.title} />
                             <div className='scada__el-text'>
@@ -84,14 +84,14 @@ const Services = () => {
                                 <div className='scada__el-description'>{item.text}</div>
                             </div>
                         </div>
-                    </>) ) }
+                    </div>) ) }
                 </div>
                 { !isMobile ? <>
                     <h3 className='scada__title'>
                         Опционально подключаемые модули
                     </h3>
                     <div className='scada__block'>
-                        { listTwo.map((item) => (<>
+                        { listTwo.map((item) => (<div key={item.id}>
                             <div className='scada__el'>
                                 <img className='scada__el-icon' src={item.icon} alt={item.title} />
                                 <div className='scada__el-text'>
@@ -99,7 +99,7 @@ const Services = () => {
                                     <div className='scada__el-description'>{item.text}</div>
                                 </div>
                             </div>
-                        </>) ) }
+                        </div>) ) }
                     </div>
                 </> : null }
             </div>
@@ -108,7 +108,7 @@ const Services = () => {
                         Опционально подключаемые модули
                     </h3>
                     <div className='scada__block scada__block-mobile'>
-                        { listTwo.map((item) => (<>
+                        { listTwo.map((item) => (<div key={item.id}>
                             <div className='scada__el'>
                                 <img className='scada__el-icon' src={item.icon} alt={item.title} />
                                 <div className='scada__el-text'>
@@ -116,7 +116,7 @@ const Services = () => {
                                     <div className='scada__el-description'>{item.text}</div>
                                 </div>
                             </div>
-                        </>) ) }
+                        </div>) ) }
                     </div>
                 </> : null }
             <div className='scada__right'>
