@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.cbd9540e.css",
-    "main.js": "/static/js/main.d0ece05b.js",
+    "main.css": "/static/css/main.113ace2a.css",
+    "main.js": "/static/js/main.4e68f20c.js",
     "static/js/787.28525a86.chunk.js": "/static/js/787.28525a86.chunk.js",
     "static/media/gov.svg": "/static/media/gov.1e37e188c8c6df7a243b663eb0f0aefd.svg",
     "static/media/desktop.png": "/static/media/desktop.910d7f2e1ff308f94857.png",
@@ -72,7 +72,6 @@
     "static/media/SegoeUI-Bold.woff2": "/static/media/SegoeUI-Bold.0ac1a7667d928aac19d9.woff2",
     "static/media/SegoeUI.woff2": "/static/media/SegoeUI.b55d28915ec9ca96c8fb.woff2",
     "static/media/1c.svg": "/static/media/1c.2f2746307714119031d06f732ed6af65.svg",
-    "static/media/UNIOS-mobile.svg": "/static/media/UNIOS-mobile.8f264f5e8ffbc60d0101398ca57256d9.svg",
     "static/media/gazprom-oil.svg": "/static/media/gazprom-oil.963eaf8cb2cad281686011a447d6cb45.svg",
     "static/media/logo-dark.svg": "/static/media/logo-dark.c50053f23fbafc86a7356e4befe6cd4c.svg",
     "static/media/logo.svg": "/static/media/logo.35b58f6751818a8554dba6a0be55fd29.svg",
@@ -109,12 +108,12 @@
     "static/media/check.svg": "/static/media/check.d2be13166c1c68cc75c4.svg",
     "static/media/cross.svg": "/static/media/cross.768a8e280738a5b77e2140c6746ae480.svg",
     "static/media/arrow-right-black.svg": "/static/media/arrow-right-black.6eacbc854af3bec6399b04b00dda13e3.svg",
-    "main.cbd9540e.css.map": "/static/css/main.cbd9540e.css.map",
-    "main.d0ece05b.js.map": "/static/js/main.d0ece05b.js.map",
+    "main.113ace2a.css.map": "/static/css/main.113ace2a.css.map",
+    "main.4e68f20c.js.map": "/static/js/main.4e68f20c.js.map",
     "787.28525a86.chunk.js.map": "/static/js/787.28525a86.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.cbd9540e.css",
-    "static/js/main.d0ece05b.js"
+    "static/css/main.113ace2a.css",
+    "static/js/main.4e68f20c.js"
   ]
 }
