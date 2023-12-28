@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.0cf0188e.css",
-    "main.js": "/static/js/main.e1fc04f0.js",
+    "main.css": "/static/css/main.5ca3d7fa.css",
+    "main.js": "/static/js/main.1eed37de.js",
     "static/js/787.28525a86.chunk.js": "/static/js/787.28525a86.chunk.js",
     "static/media/gov.svg": "/static/media/gov.1e37e188c8c6df7a243b663eb0f0aefd.svg",
     "static/media/desktop.png": "/static/media/desktop.910d7f2e1ff308f94857.png",
@@ -11,6 +11,7 @@
     "static/media/Inter-ExtraBold.woff": "/static/media/Inter-ExtraBold.f406281c4c58e9b29727.woff",
     "static/media/Inter-Bold.woff": "/static/media/Inter-Bold.6a96514e94e52cecbd01.woff",
     "static/media/toir.png": "/static/media/toir.418c7a430fc7d0b78572.png",
+    "static/media/scheme-mobile.svg": "/static/media/scheme-mobile.96662d97513171971dd7853256b45991.svg",
     "static/media/Inter-SemiBold.woff": "/static/media/Inter-SemiBold.5f49c328bed84f7386ff.woff",
     "static/media/Inter-Black.woff": "/static/media/Inter-Black.3de1267c05ea9ba71fc9.woff",
     "static/media/Inter-Medium.woff": "/static/media/Inter-Medium.23e61f6ef0b196640fcd.woff",
@@ -84,7 +85,6 @@
     "static/media/pc.svg": "/static/media/pc.ff09a55c2e785e87545a509571df2d33.svg",
     "static/media/smart.svg": "/static/media/smart.19c2578e9807c4828af7c8d8663b823b.svg",
     "static/media/table.svg": "/static/media/table.f86f67ea73b86ec763c0c1736616b3bc.svg",
-    "static/media/3d.svg": "/static/media/3d.f475dca0cae1cc50d3f3a54636eb2f43.svg",
     "static/media/build.svg": "/static/media/build.f475dca0cae1cc50d3f3a54636eb2f43.svg",
     "static/media/form.svg": "/static/media/form.284162b9078d251a85f15dd467dc40c1.svg",
     "static/media/hub.svg": "/static/media/hub.20e35f2f2f1984278e244643f9893128.svg",
@@ -108,12 +108,12 @@
     "static/media/check.svg": "/static/media/check.d2be13166c1c68cc75c4.svg",
     "static/media/cross.svg": "/static/media/cross.768a8e280738a5b77e2140c6746ae480.svg",
     "static/media/arrow-right-black.svg": "/static/media/arrow-right-black.6eacbc854af3bec6399b04b00dda13e3.svg",
-    "main.0cf0188e.css.map": "/static/css/main.0cf0188e.css.map",
-    "main.e1fc04f0.js.map": "/static/js/main.e1fc04f0.js.map",
+    "main.5ca3d7fa.css.map": "/static/css/main.5ca3d7fa.css.map",
+    "main.1eed37de.js.map": "/static/js/main.1eed37de.js.map",
     "787.28525a86.chunk.js.map": "/static/js/787.28525a86.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.0cf0188e.css",
-    "static/js/main.e1fc04f0.js"
+    "static/css/main.5ca3d7fa.css",
+    "static/js/main.1eed37de.js"
   ]
 }
