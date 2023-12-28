@@ -1,9 +1,9 @@
 {
   "files": {
-    "main.css": "/static/css/main.a348c777.css",
-    "main.js": "/static/js/main.6271b4fa.js",
+    "main.css": "/static/css/main.0245c2e5.css",
+    "main.js": "/static/js/main.6d44543a.js",
     "static/js/787.28525a86.chunk.js": "/static/js/787.28525a86.chunk.js",
-    "static/media/gov.svg": "/static/media/gov.1e37e188c8c6df7a243b663eb0f0aefd.svg",
+    "static/media/gov.svg": "/static/media/gov.1ff07fb0fb1613b9cd0261897fcfc3c7.svg",
     "static/media/desktop.png": "/static/media/desktop.910d7f2e1ff308f94857.png",
     "static/media/integration.png": "/static/media/integration.c635f272496b7928c18a.png",
     "static/media/scada.png": "/static/media/scada.fd6140bb2acdd8cdd132.png",
@@ -29,7 +29,6 @@
     "static/media/Inter-SemiBold.woff2": "/static/media/Inter-SemiBold.4f57d287a5ac011065a8.woff2",
     "static/media/Inter-Black.woff2": "/static/media/Inter-Black.e5dd1de021e544a3c504.woff2",
     "static/media/Inter-Medium.woff2": "/static/media/Inter-Medium.60a7ebe5726ce021914b.woff2",
-    "static/media/gazprom.svg": "/static/media/gazprom.4c26d7b7a149607fbcc259537028ee78.svg",
     "static/media/Inter-Light.woff2": "/static/media/Inter-Light.3636331c9384889e5c65.woff2",
     "static/media/Inter-ExtraLight.woff2": "/static/media/Inter-ExtraLight.516dc6d8059b05040f2a.woff2",
     "static/media/Inter-Regular.woff2": "/static/media/Inter-Regular.7e3012339f8b0fe4dcd3.woff2",
@@ -72,13 +71,15 @@
     "static/media/SegoeUI.woff": "/static/media/SegoeUI.40dea9899e829bfb595a.woff",
     "static/media/SegoeUI-Bold.woff2": "/static/media/SegoeUI-Bold.0ac1a7667d928aac19d9.woff2",
     "static/media/SegoeUI.woff2": "/static/media/SegoeUI.b55d28915ec9ca96c8fb.woff2",
-    "static/media/1c.svg": "/static/media/1c.2f2746307714119031d06f732ed6af65.svg",
-    "static/media/gazprom-oil.svg": "/static/media/gazprom-oil.963eaf8cb2cad281686011a447d6cb45.svg",
+    "static/media/gov.png": "/static/media/gov.245a5cf8252282fd51ff.png",
+    "static/media/oneC.svg": "/static/media/oneC.b69ed56a84fdf41b97906456a20fc049.svg",
+    "static/media/gazprom-oil.svg": "/static/media/gazprom-oil.6b554a82067210e2ae8ace4e89dbeace.svg",
     "static/media/logo-dark.svg": "/static/media/logo-dark.c50053f23fbafc86a7356e4befe6cd4c.svg",
     "static/media/logo.svg": "/static/media/logo.35b58f6751818a8554dba6a0be55fd29.svg",
     "static/media/logo-mobile-black.svg": "/static/media/logo-mobile-black.514ced9c9b8a02622649f4d6c1abadc9.svg",
     "static/media/logo-mobile.svg": "/static/media/logo-mobile.a0633a676998b61a8eaf5b077d50bfbf.svg",
     "static/media/folder.svg": "/static/media/folder.65356882376d1b97202ac1009683801b.svg",
+    "static/media/gazprom.svg": "/static/media/gazprom.c447a228b647c46a3f7038d39c57f163.svg",
     "static/media/settings.svg": "/static/media/settings.99bcdd506f7e69df730c9a529a63d83a.svg",
     "static/media/map.svg": "/static/media/map.f6a1131b687b9854cde0690f73805320.svg",
     "static/media/ai.svg": "/static/media/ai.32f3fcc4678e968cf1368100349d99c3.svg",
@@ -108,12 +109,12 @@
     "static/media/check.svg": "/static/media/check.d2be13166c1c68cc75c4.svg",
     "static/media/cross.svg": "/static/media/cross.768a8e280738a5b77e2140c6746ae480.svg",
     "static/media/arrow-right-black.svg": "/static/media/arrow-right-black.6eacbc854af3bec6399b04b00dda13e3.svg",
-    "main.a348c777.css.map": "/static/css/main.a348c777.css.map",
-    "main.6271b4fa.js.map": "/static/js/main.6271b4fa.js.map",
+    "main.0245c2e5.css.map": "/static/css/main.0245c2e5.css.map",
+    "main.6d44543a.js.map": "/static/js/main.6d44543a.js.map",
     "787.28525a86.chunk.js.map": "/static/js/787.28525a86.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.a348c777.css",
-    "static/js/main.6271b4fa.js"
+    "static/css/main.0245c2e5.css",
+    "static/js/main.6d44543a.js"
   ]
 }
