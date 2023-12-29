@@ -164,7 +164,7 @@ const Hero = () => {
                                 </div>
                             </div>
                         </SwiperSlide>
-                </Swiper>
+                </Swiper> 
 
             {/* <div className='hero__top'>
                 <div className='hero__left'>
@@ -241,8 +241,8 @@ const Hero = () => {
         </div>
         <div className='background-triangles'>
             <div className='background-inner'></div>
-            <div className='tr-one'></div>
-            <div className='tr-two'></div>
+            { !isMobile ? <><div className='tr-one'></div>
+            <div className='tr-two'></div></> : null }
         </div>
         {/* <div className='tr-one'></div>
         <div className='tr-two'></div> */}

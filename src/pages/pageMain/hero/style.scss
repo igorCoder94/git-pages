@@ -62,7 +62,7 @@
     }
 
     &__main {
-        border: 1px solid black;
+        // border: 1px solid black;
         width: 100px;
         height: 200px;
     }
@@ -441,6 +441,10 @@
             bottom: 0px;
             filter: none;
         }
+
+        &-mobile {
+            margin-bottom: 60px;
+        }
     }
 }
 
@@ -560,13 +564,13 @@
     z-index: 0;
 }
 
-.hero__section .border__left {
+.border-hero__left {
     @media (max-width: 800px) {
         left: 15px;
     }
 }
 
-.hero__section .border__right {
+.border-hero__right {
     @media (max-width: 800px) {
         top: -40px;
         height: calc(100% + 40px);
@@ -582,21 +586,41 @@
     top: -31px;
     left: 0;
     z-index: -2;
+
+    @media (max-width: 800px) {
+        position: absolute;
+        display: inline-block;
+        border-bottom: 81px solid #FFF;
+        border-left: 100vw solid transparent;
+        top: 161px;
+        left: 0;
+        z-index: -2;
+    }
 }
 
 .background-white {
     position: absolute;
     background: white;
-    height: calc(100vh - 412px);
+    height: 200vh;
     width: 100vw;
     top: 412px;
     left: 0;
     z-index: -2;
+
+    @media (max-width: 800px) {
+        position: absolute;
+        background: white;
+        height: 1000vh;
+        width: 100vw;
+        top: 242px;
+        left: 0;
+        z-index: -2;
+    }
 }
 
 .background-triangles {
     position: absolute;
-    border: 1px solid black;
+    // border: 1px solid black;
     top: -121px;
     left: 0;
     width: 100vw;
@@ -632,6 +656,11 @@
     rotate: 32deg;
     left: -156vw;
     z-index: -2;
+
+    @media (max-width: 800px) {
+        animation: none;
+        left: -149vw;
+    }
 }  
 
 // .tr-one {
@@ -658,11 +687,24 @@
     left: -235vw;
     box-shadow: 128px 0px 105px 0px rgba(0, 71, 255, 0.08) inset;
     filter: drop-shadow(-60px 0px 200px rgba(0, 166, 255, 0.30));
-    animation: animation infinite 20s;
-    animation-delay: 1s;
+    // animation: animation infinite 20s;
+    // animation-delay: 1s;
     border-top: 500vh solid rgba(0, 71, 255, 0.20);
     border-left: 500vw solid transparent;
-    rotate: -8deg
+    rotate: -8deg;
+
+    @media (max-width: 800px) {
+        position: absolute;
+        top: 0;
+        left: 0;
+        top: -240vh;
+        left: -190vw;
+        box-shadow: 128px 0px 105px 0px rgba(0, 71, 255, 0.08) inset;
+        filter: drop-shadow(-60px 0px 200px rgba(0, 166, 255, 0.3));
+        border-top: 500vh solid rgba(0, 71, 255, 0.2);
+        border-left: 500vw solid transparent;
+        rotate: -23deg;
+    }
 }
 
 @keyframes animation {

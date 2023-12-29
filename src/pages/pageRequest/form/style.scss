@@ -44,6 +44,7 @@
         @include flex(column, flex-start, center, nowrap);
         overflow: visible;
         padding: 0;
+        z-index: 0;
     }
 
     &__content {
@@ -59,7 +60,7 @@
         }
 
         @media (max-width: 670px) {
-            padding: 40px 10px;
+            padding: 40px 15px;
             width: 100vw;
             border-radius: 0;
         }
@@ -192,12 +193,9 @@
         column-gap: 10px;
         row-gap: 6px;
 
-        @media (max-width: 670px) {
-            grid-template-columns: 156px 1fr;
-        }
-
-        @media (max-width: 420px) {
-            grid-template-columns: 100px 1fr;
+        @media (max-width: 800px) {
+            grid-template-columns: 1fr;
+            margin-bottom: 30px;
         }
     }
 
@@ -218,13 +216,13 @@
         border-radius: 4px;
 
         @media (max-width: 670px) {
-            font-size: 12px;
+            // font-size: 12px;
         }
 
-        @media (max-width: 420px) {
-            font-size: 8px;
-            padding: 15px 5px;
-        }
+        // @media (max-width: 420px) {
+        //     font-size: 8px;
+        //     padding: 15px 5px;
+        // }
     }
 
     &__item:has(.grid__item-inner) {
@@ -251,7 +249,8 @@
 
         @media (max-width: 420px) {
             padding: 15px 15px;
-            justify-content: center;
+            justify-content: flex-start;
+            align-items: center;
         }
 
         &:last-child {
@@ -268,9 +267,9 @@
         line-height: normal;
         letter-spacing: 0.22px;
 
-        @media (max-width: 670px) {
-            font-size: 8px;
-        }
+        // @media (max-width: 670px) {
+        //     font-size: 8px;
+        // }
     }
 
     &__item-inner-list {
@@ -300,7 +299,11 @@
         font-weight: 600;
 
         @media (max-width: 670px) {
-            padding: 40px 10px;
+            margin-bottom: 0;
+        }    
+
+        @media (max-width: 670px) {
+            padding: 15px 20px;
             width: 100%;
             border-radius: 4px;
         }
@@ -350,11 +353,7 @@
     transition: 120ms transform ease-in-out;
 
     @media (max-width: 670px) {
-        top: 0px;
-    }
-
-    @media (max-width: 420px) {
-        top: 4px;
+        top: -2px;
     }
   }
   

@@ -129,7 +129,7 @@ const ConnectUs = ({ togglePopup }) => {
                     </div>
                     <div className='connect-us__agreement'>
                         <input className="check" type="checkbox" name="agreement" onChange={handleChange} value={formData.agreement} />
-                        <span>Я даю свое согласие на обработку данных</span>
+                        <label >Я даю свое согласие на обработку данных</label>
                     </div>
                     {errors.required ? <div className='connect-us__error-text'>{errors.required}</div> : null}
                     {errors.email ? <div className='connect-us__error-text'>{errors.email}</div> : null}

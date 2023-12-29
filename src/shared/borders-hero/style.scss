@@ -1,13 +1,17 @@
 .border-hero {
-    position: absolute;
-    top: 0;
-    height: 100%;
-    border-left: 1px dashed red;
+    position: absolute;    
+    border-left: 1px dashed #DDE1EC;
     z-index: -1;
     opacity: .5;
+    top: 414px;
+    height: calc(100% - 414px);
 
     &__left {
         left: 0%;
+
+        @media (max-width: 800px) {
+            left: 15px;
+        }
     }
     
     &__left-middle {
@@ -24,5 +28,9 @@
     
     &__right {
         right: 0%;
+
+        @media (max-width: 800px) {
+            right: 15px;
+        }
     }
 }
