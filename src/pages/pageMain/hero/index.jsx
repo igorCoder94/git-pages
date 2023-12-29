@@ -23,7 +23,7 @@ import { useMediaQuery } from '@react-hook/media-query';
 import 'swiper/css/pagination';
 import 'swiper/css/effect-fade';
 import 'swiper/css';
-import Borders from '../../../shared/borders';
+import BordersHero from '../../../shared/borders-hero';
 
 const Hero = () => {
     const isTablet = useMediaQuery('(max-width: 1100px)');
@@ -231,13 +231,21 @@ const Hero = () => {
             </div>  
             }
         </div>
-        <div className='background'> 
-            {/* <div className='tr-one'></div>
-            <div className='tr-two'></div> */}
-        </div>
         <div className='borders-container'>
-                <Borders /> 
+            <BordersHero /> 
         </div>  
+        <div className='final-triangle'>
+
+        </div>
+        <div className='background-white'> 
+        </div>
+        <div className='background-triangles'>
+            <div className='background-inner'></div>
+            <div className='tr-one'></div>
+            <div className='tr-two'></div>
+        </div>
+        {/* <div className='tr-one'></div>
+        <div className='tr-two'></div> */}
     </section>
 }
 

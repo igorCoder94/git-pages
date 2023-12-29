@@ -143,6 +143,7 @@ h3 {
 }
 
 section {
+  position: relative;
   @include flex(column, center, center);
   padding: 0 15px;
   height: fit-content;

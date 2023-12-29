@@ -1,0 +1,14 @@
+.page-main {
+    &__background {
+        position: absolute;
+        top: -121px;
+        height: calc(100vh + 121px);
+        width: 100vw;
+        // background: radial-gradient(91.01% 98.76% at 48.71% 49.95%, #24CAFF 9.8%, #0075FF 100%);
+        background: transparent;
+
+        @media (max-width: 500px) {
+            top: -96px;
+        }
+    }
+}

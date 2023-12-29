@@ -7,10 +7,11 @@ import News from './news';
 import Join from '../../shared/join';
 import { HelmetProvider } from 'react-helmet-async';
 import Integration from './integration';
+import './style.scss';
 
 const PageMain = ({ togglePopup }) => {
     return (
-        <>
+        <div style={{ position: 'relative' }}>
             <HelmetProvider>
                 <title>Unios - Сервис для автоматизации эксплуатации объектов</title>
                 <meta name="description" content="Unios - сервис автоматизации эксплуатации и технического обслуживания оборудования. Мониторинг, Диспетчеризация, Техническое обслуживание и Ремонт оборудования" />
@@ -24,7 +25,7 @@ const PageMain = ({ togglePopup }) => {
             <News />
             <NewsCards />
             <Join togglePopup={togglePopup} />
-        </>
+        </div>
     )
 }
 
