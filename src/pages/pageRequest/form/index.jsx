@@ -165,7 +165,7 @@ const Form = () => {
     const finishSubmit = () => {
         setLoading(true);
 
-        axios.post('https://sheet.best/api/sheets/192cc416-de51-4fa0-942d-56a3dae4bfb0', formData)
+        axios.post('https://sheet.best/api/sheets/95e8a488-fb89-4bf7-874d-7f6225269c7d', formData)
         .then(response => {
             setNotification('Предложение успешно отправлено!');
             setLoading(false);    
@@ -193,7 +193,7 @@ const Form = () => {
         <div className='request-form__container container'>
             <div className='request-form__content'>
             <h1 className='request-form__title'>Формирование предложения</h1>
-                <form className='request-from__form'>
+                <form className='request-form__form'>
                     <div className='request-form__main'>
                         <div className='request-form__block'>
                             <div className='request-form__block-title'>Основные данные</div>
@@ -230,8 +230,8 @@ const Form = () => {
                                                         <div className='grid__item-inner-list'>
                                                             { basic.options.map((item) => (<div className='grid__item-inner grid__item-inner'>{ item }</div>))}
                                                             <div className='grid__item-inner grid__item-cost'>
-                                                                <div>Стоимость:</div>
-                                                                <div>{ basic.cost }</div>
+                                                                <div className='grid__cost-name'>Стоимость:</div>
+                                                                <div className='grid__cost-value'>{ basic.cost }</div>
                                                             </div>
                                                         </div>
 
@@ -252,8 +252,8 @@ const Form = () => {
                                                         <div className='grid__item-inner-list'>
                                                             { additional.options.map((item) => (<div className='grid__item-inner grid__item-inner'>{ item }</div>))}
                                                             <div className='grid__item-inner grid__item-cost'>
-                                                                <div>Стоимость:</div>
-                                                                <div>{ additional.cost }</div>
+                                                                <div className='grid__cost-name'>Стоимость:</div>
+                                                                <div className='grid__cost-value'>{ additional.cost }</div>
                                                             </div>
                                                         </div>
 
@@ -299,7 +299,13 @@ const Form = () => {
                         </div>
 
                         <div className='request-form__bottom'>
-                            { notification ? <div className='request-form__success'>{notification}</div> : <>
+                            { notification ? <div className='request-form__success'>
+                                {notification}
+                                <svg id='svg__test-two' version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 130.2 130.2">
+                                    <circle class="path circle" fill="none" stroke="#73AF55" stroke-width="6" stroke-miterlimit="10" cx="65.1" cy="65.1" r="62.1"/>
+                                    <polyline class="path check" fill="none" stroke="#73AF55" stroke-width="6" stroke-linecap="round" stroke-miterlimit="10" points="100.2,40.2 51.5,88.8 29.8,67.5 "/>
+                                </svg>
+                                </div> : <>
                                 <div className='request-form__button'>
                                     <button className={`request-form__submit ${formData.agreement === false || loading || notification ? 'blocked' : ''}`} type='submit' onClick={handleSubmit}>Рассчитать</button>
                                     { loading ? <ClipLoader className='request-form__spinner' size="20px" color='black'/> : null}
@@ -315,7 +321,10 @@ const Form = () => {
                     </div>
                 </form>
             </div>
-            <Borders />
+            <div className='request-form__borders'>
+                <Borders />
+            </div>
+            <div className='request__background'></div> 
         </div>
     </section>
 }

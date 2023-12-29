@@ -75,8 +75,7 @@ const ConnectUs = ({ togglePopup }) => {
 
     const finishSubmit = () => {
         setLoading(true);
-
-        axios.post('https://sheet.best/api/sheets/9b281df5-abc3-4732-917b-d4a7ea6442d0', formData)
+        axios.post('https://sheet.best/api/sheets/4008ed81-743a-4254-b925-ede6247b5304', formData)
         .then(response => {
             console.log(response);
             setNotification('Запрос успешно отправлен!');
@@ -134,9 +133,20 @@ const ConnectUs = ({ togglePopup }) => {
                     </div>
                     {errors.required ? <div className='connect-us__error-text'>{errors.required}</div> : null}
                     {errors.email ? <div className='connect-us__error-text'>{errors.email}</div> : null}
-                    {errors.fail ? <div className='connect-us__error-text'>{errors.fail}</div> : null}
+                    {errors.fail ? <div className='connect-us__error-text'>
+                        {errors.fail}
+                    </div> : null}
                     <div className="connect-us__button">
-                        { notification ? <div className='connect-us__success'>{notification}</div> : 
+                        { notification ? 
+                        <>
+                            <div className='connect-us__success'>
+                                {notification} <svg id='svg__test' version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 130.2 130.2">
+                            <circle class="path circle" fill="none" stroke="#73AF55" stroke-width="6" stroke-miterlimit="10" cx="65.1" cy="65.1" r="62.1"/>
+                            <polyline class="path check" fill="none" stroke="#73AF55" stroke-width="6" stroke-linecap="round" stroke-miterlimit="10" points="100.2,40.2 51.5,88.8 29.8,67.5 "/>
+                            </svg>
+                            </div>
+                        </>
+                             : 
                         <>
                             <button type="submit" className={`connect-us__submit ${formData.agreement === false || loading || notification ? 'blocked' : ''}`} onClick={handleSubmit}>Отправить</button>
                             { loading ? <ClipLoader className='connect-us__spinner' size="20px" color='black'/> : null}    

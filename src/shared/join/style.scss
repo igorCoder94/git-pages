@@ -26,6 +26,7 @@
         
         @media (max-width: 1000px) {
             flex-direction: column;
+            padding-top: 80px;
             gap: 34px;
         }
     }
@@ -92,6 +93,7 @@
         font-weight: 600;
         line-height: 18px;
         transition: .2s;
+        cursor: pointer;
 
         &:hover {
             opacity: .3;
@@ -102,7 +104,7 @@
         transform: rotate(-5deg);
         position: absolute;
         bottom: -150px;
-        width: 105%;
+        width: 110%;
         height: 315px;
         background: white;
     }

@@ -9,19 +9,21 @@ import table from '../../../assets/icons/pageMain/scada/table.svg';
 import video from '../../../assets/icons/pageMain/scada/video.svg';
 import Borders from '../../../shared/borders';
 import { ReactComponent as IconScheme } from '../../../assets/images/main/scada/111.svg';
+import { ReactComponent as IconSchemeMobile } from '../../../assets/images/main/scada/scheme-mobile.svg';
 import { useMediaQuery } from '@react-hook/media-query';
+import { useEffect, useState } from 'react';
 
 const listOne = [
     {
         id: 0,
         title: 'Диспетчеризация SCADA/IoT',
-        text: 'Универсальный интегратор SCADA систем (MB RTU, OPC и др.)',
+        text: 'Универсальный интегратор SCADA систем (MB RTU, TCP, S7, Profinet и др.)',
         icon: hub,
     },
     {
         id: 1,
         title: 'Мониторинг',
-        text: 'Панель мониторинга и оповещений',
+        text: 'Панель мониторинга и оповещений. Представление данных в едином виде',
         icon: smart,
     },
     {
@@ -39,24 +41,6 @@ const listOne = [
 ];
 
 const listTwo = [
-    {
-        id: 0,
-        title: 'AI прогноз',
-        text: 'Предиктивная и статистическая аналитика о состоянии систем',
-        icon: settings,
-    },
-    {
-        id: 1,
-        title: 'AI Видеоаналитика',
-        text: 'Комплексное определение технологических событий по телеметрии и видеонаблюдению',
-        icon: video,
-    },
-    {
-        id: 3,
-        title: 'Интерактивные карты',
-        text: '3D Планы расположения устройств на объекте',
-        icon: table,
-    },
 ];
 
 const Services = () => {
@@ -76,7 +60,7 @@ const Services = () => {
                 </h2> : null }
                 <img className='scada__img' src={scada} alt="scada" />
                 <div className='scada__block'>
-                    { listOne.map((item) => (<div key={item.id}>
+                    { listOne?.map((item) => (<div key={item.id}>
                         <div className='scada__el'>
                             <img className='scada__el-icon' src={item.icon} alt={item.title} />
                             <div className='scada__el-text'>
@@ -86,12 +70,12 @@ const Services = () => {
                         </div>
                     </div>) ) }
                 </div>
-                { !isMobile ? <>
+                { !isMobile && listTwo.length > 0 ? <>
                     <h3 className='scada__title'>
                         Опционально подключаемые модули
                     </h3>
                     <div className='scada__block'>
-                        { listTwo.map((item) => (<div key={item.id}>
+                        { listTwo?.map((item) => (<div key={item.id}>
                             <div className='scada__el'>
                                 <img className='scada__el-icon' src={item.icon} alt={item.title} />
                                 <div className='scada__el-text'>
@@ -103,7 +87,7 @@ const Services = () => {
                     </div>
                 </> : null }
             </div>
-            { isMobile ? <>
+            { isMobile && listTwo.length > 0 ? <>
                     <h3 className='scada__title-mobile'>
                         Опционально подключаемые модули
                     </h3>
@@ -119,9 +103,10 @@ const Services = () => {
                         </div>) ) }
                     </div>
                 </> : null }
-            <div className='scada__right'>
-                <IconScheme className='scada__scheme'/>
-            </div>
+                <div className='scada__right'>
+                    <IconSchemeMobile className='scada__scheme'/>
+                    <IconSchemeMobile className='scada__scheme-mobile'/>
+                </div>
             {/* <div className='scada__border-left'></div>
             <div className='scada__border-right'></div>
             <div className='scada__border-middle'></div> */}

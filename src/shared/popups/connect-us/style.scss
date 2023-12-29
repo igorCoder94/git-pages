@@ -34,13 +34,13 @@
 .connect-us {
     @include flex(row, center, center);
     position: fixed;
-    background: black;
+    // background: black;
     height: 100vh;
     width: 100vw;
     top: 0;
     left: 0;
     z-index: 10000;
-    background-color: rgba(black ,0.4);
+    // background-color: rgba(black ,0.4);
 
     &__container {
         position: relative;
@@ -48,7 +48,7 @@
         padding: 40px 60px;
         max-width: 826px;
         height: fit-content;
-        max-height: 80vh;
+        max-height: 100vh;
         background: #FFF;
         border-radius: 4px;
         overflow: auto;
@@ -126,7 +126,7 @@
     }
 
     &__agreement {
-        @include flex(row);
+        @include flex(row, flex-start, center, nowrap);
         margin-top: 10px;
         gap: 6px;
 
@@ -168,6 +168,9 @@
     }
 
     &__error-text {
+        display: flex;
+        flex-direction: row;
+        gap: 2px;
         margin-top: 10px;
         color: red;
         font-size: 12px;
@@ -186,6 +189,10 @@
     }
 
     &__success {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        row-gap: 12px;
         margin-top: 10px;
         color: green;
         font-size: 16px;
@@ -213,4 +220,79 @@ input[type="checkbox"]::before {
 .blocked {
     opacity: .1;
     pointer-events: none;
+}
+
+
+#svg__test {
+  width: 40px;
+  display: block;
+  margin: 2px;
+}
+
+.path {
+  stroke-dasharray: 1000;
+  stroke-dashoffset: 0;
+  &.circle {
+    -webkit-animation: dash .9s ease-in-out;
+    animation: dash .9s ease-in-out;
+  }
+  &.line {
+    stroke-dashoffset: 1000;
+    -webkit-animation: dash .9s .35s ease-in-out forwards;
+    animation: dash .9s .35s ease-in-out forwards;
+  }
+  &.check {
+    stroke-dashoffset: -100;
+    -webkit-animation: dash-check .9s .35s ease-in-out forwards;
+    animation: dash-check .9s .35s ease-in-out forwards;
+  }
+}
+
+p {
+  text-align: center;
+  margin: 20px 0 60px;
+  font-size: 1.25em;
+  &.success {
+    color: #73AF55;
+  }
+  &.error {
+    color: #D06079;
+  }
+}
+
+
+@-webkit-keyframes dash {
+  0% {
+    stroke-dashoffset: 1000;
+  }
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes dash {
+  0% {
+    stroke-dashoffset: 1000;
+  }
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+
+@-webkit-keyframes dash-check {
+  0% {
+    stroke-dashoffset: -100;
+  }
+  100% {
+    stroke-dashoffset: 900;
+  }
+}
+
+@keyframes dash-check {
+  0% {
+    stroke-dashoffset: -100;
+  }
+  100% {
+    stroke-dashoffset: 900;
+  }
 }

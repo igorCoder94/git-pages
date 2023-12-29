@@ -1,6 +1,7 @@
 import './style.scss';
 import control from '../../../assets/images/main/control/control.png';
 import { ReactComponent as IconScheme} from '../../../assets/images/main/control/scheme.svg';
+import { ReactComponent as IconSchemeMobile} from '../../../assets/images/main/control/scheme-mobile.svg';
 import map from '../../../assets/icons/pageMain/control/map.svg';
 import pc from '../../../assets/icons/pageMain/control/pc.svg';
 import form from '../../../assets/icons/pageMain/control/form.svg';
@@ -53,7 +54,8 @@ const Control = () => {
                 </div>
             </div>
             <div className='control__right'>
-                <IconScheme className='control__scheme' />
+                <IconSchemeMobile className='control__scheme' />
+                <IconSchemeMobile className='control__scheme-mobile' />
             </div>
             <Borders />
         </div>

@@ -38,9 +38,14 @@
         width: 100%;
         min-height: 121px;
 
-        @media (max-width: 800px) {
+        @media (max-width: 1143px) {
             // min-height: 46px;
-            // padding: 0;
+            padding-left: 0;
+        }
+
+        @media (max-width: 500px) {
+            padding: 30px 0;
+            min-height: 0;
         }
     }
 
@@ -114,6 +119,10 @@
 
         &-icon {
             cursor: pointer;
+        }
+
+        @media (max-width: 1143px) {
+            padding: 0 30px;
         }
     }
 

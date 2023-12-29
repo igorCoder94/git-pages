@@ -1,5 +1,6 @@
 import Borders from '../../../shared/borders';
 import './style.scss';
+import { useEffect } from 'react';
 
 const demoList = [
     'Единообразное отображение и анализ данных SCADA систем предприятия',
@@ -24,8 +25,8 @@ const News = () => {
                         </ul>
                     </div>
                 </div>
-                <div className='news__video'>
-                    <iframe width="100%" height="481" src="https://www.youtube.com/embed/eSE6hXl4IxQ?si=oeMaDK39pcOA1HoC" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe>
+                <div className='thumb-wrap'>
+                    <iframe id="iframe" width="560" height="315" src="https://www.youtube.com/embed/eSE6hXl4IxQ?si=oeMaDK39pcOA1HoC" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe>
                 </div>
             </div>
             <Borders />

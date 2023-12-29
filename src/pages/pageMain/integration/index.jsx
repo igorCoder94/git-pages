@@ -1,10 +1,12 @@
 import './style.scss';
 import integration from '../../../assets/images/main/integration/integration.png';
 import {ReactComponent as IconScheme } from '../../../assets/images/main/integration/scheme.svg';
+import {ReactComponent as IconSchemeMobile } from '../../../assets/images/main/integration/scheme-mobile.svg';
 import modules from '../../../assets/icons/pageMain/integration/modules.svg';
 import build from '../../../assets/icons/pageMain/integration/build.svg';
 import table from '../../../assets/icons/pageMain/integration/table.svg';
-import graphic from '../../../assets/icons/pageMain/integration/graphic.svg';
+import settings from '../../../assets/icons/pageMain/integration/settings.svg';
+import analytics from '../../../assets/icons/pageMain/integration/analytics.svg';
 import video from '../../../assets/icons/pageMain/integration/video.svg';
 import { useMediaQuery } from '@react-hook/media-query';
 
@@ -22,24 +24,34 @@ const listOne = [
 
 const listTwo = [
     {
-        id: 2,
-        title: 'Интерактивные карты BIM',
-        icon: graphic,
-    },
-    {
         id: 0,
-        title: 'Построение гибких Бизнес Процессов BPM',
+        title: 'Модуль интеграции 3D BIM моделей',
         icon: build,
     },
     {
         id: 1,
-        title: 'Системы электронного документооборота СЭД',
-        icon: table,
+        title: 'Построение гибких Бизнес Процессов BPM',
+        icon: settings,
+    },
+    {
+        id: 2,
+        title: 'Модуль статистической аналитики. Прогнозирование событий',
+        icon: analytics,
     },
     {
         id: 3,
         title: 'Промышленная видеоаналитика CCTV',
         icon: video,
+    },
+    {
+        id: 4,
+        title: 'Системы электронного документооборота СЭД',
+        icon: table,
+    },
+    {
+        id: 5,
+        title: 'Интеграция с системами электронного документооборота 1:С',
+        icon: table,
     },
 ];
 
@@ -103,7 +115,8 @@ const Integration = () => {
                     </div>
                 </> : null }
             <div className='integration__right'>
-                <IconScheme className='integration__scheme' />
+                <IconSchemeMobile className='integration__scheme' />
+                <IconSchemeMobile className='integration__scheme-mobile'/>
             </div>
             <Borders />
         </div>

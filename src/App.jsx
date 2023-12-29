@@ -65,13 +65,13 @@ function App() {
         <main>
           <Routes>
             <Route path="/" element={<PageMain togglePopup={togglePopup} />} ></Route>
-            <Route path="/request" element={<PageRequest />} ></Route>
+            <Route path="/request" element={<PageRequest togglePopup={togglePopup} />} ></Route>
             <Route path="/dispatching" element={<PageDispatching />} ></Route>
           </Routes>
         </main>
         <Footer togglePopup={togglePopup} />
       </div>
-      {isMenuOpen ? <div className='overlay-dark'></div> : null}
+      {isMenuOpen || isPopupOpen ? <div className='overlay-dark'></div> : null}
       {isPopupOpen ? <ConnectUs togglePopup={togglePopup} /> : null}
       <Menu open={isMenuOpen} toggleMenu={toggleMenu}/>
     </div>

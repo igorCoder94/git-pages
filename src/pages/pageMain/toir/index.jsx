@@ -1,18 +1,15 @@
 import './style.scss';
 import toir from '../../../assets/images/main/toir/toir.png';
 import { ReactComponent as IconScheme } from '../../../assets/images/main/toir/scheme.svg';
+import { ReactComponent as IconSchemeMobile } from '../../../assets/images/main/toir/scheme-mobile.svg';
 import form from '../../../assets/icons/pageMain/toir/form.svg';
 import ai from '../../../assets/icons/pageMain/toir/ai.svg';
 import map from '../../../assets/icons/pageMain/toir/map.svg';
-import table from '../../../assets/icons/pageMain/toir/table.svg';
-import d3 from '../../../assets/icons/pageMain/toir/3d.svg';
-import settings from '../../../assets/icons/pageMain/toir/settings.svg';
 import folder from '../../../assets/icons/pageMain/toir/folder.svg';
 import Borders from '../../../shared/borders';
 import { useMediaQuery } from '@react-hook/media-query';
 
 const listOne = [
-    
     {
         id: 0,
         title: 'Менеджер бизнес-процессов',
@@ -40,17 +37,6 @@ const listOne = [
 ];
 
 const listTwo = [
-    {
-        id: 2,
-        title: 'Интерактивные карты BIM',
-        text: '3D Планы расположения устройств на объекте',
-        icon: d3,
-    },
-    {
-        id: 1,
-        title: 'Интеграция с системами электронного документооборота (1:С)',
-        icon: table,
-    },
 ];
 
 const Toir = () => {
@@ -79,7 +65,7 @@ const Toir = () => {
                         </div>
                     </div>) ) }
                 </div>
-                { !isMobile ? <>
+                { !isMobile && listTwo.length > 0 ? <>
                     <h3 className='toir__title'>
                         Опционально подключаемые модули
                     </h3>
@@ -96,7 +82,7 @@ const Toir = () => {
                     </div>
                 </> : null }
             </div>
-            { isMobile ? <>
+            { isMobile && listTwo.length > 0 ? <>
                     <h3 className='toir__title-mobile'>
                         Опционально подключаемые модули
                     </h3>
@@ -114,6 +100,7 @@ const Toir = () => {
                 </> : null }
             <div className='toir__right'>
                 <IconScheme className='toir__scheme' />
+                <IconSchemeMobile className='toir__scheme-mobile' />
             </div>
             <Borders />
         </div>

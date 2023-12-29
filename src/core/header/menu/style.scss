@@ -29,17 +29,12 @@
     }
 
     &__header {
-        @include flex(row, flex-start, center);
+        @include flex(row-reverse, space-between, center, nowrap);
         gap: 15px;
         padding: 0 15px;
-        height: 46px;
+        height: 97px;
         border-top: 0.5px solid rgba(0, 0, 0, 0.30);
         border-bottom: 0.5px solid rgba(0, 0, 0, 0.30);
-    }
-
-    &__border {
-        border-right: 1px solid rgba(0, 0, 0, 0.30);
-        height: 16px;
     }
 
     &__close {

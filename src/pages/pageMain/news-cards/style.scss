@@ -15,6 +15,7 @@
 
         @media (max-width: 800px) {
             padding-top: 60px;
+            padding-bottom: 20px;
         }
     }
 
@@ -55,7 +56,7 @@
         position: relative;
         flex: 1 1 402px;
         // min-width: 300px;
-        max-width: 330px;
+        max-width: 329px;
         min-height: 656px;
         border-radius: 10px;
         border: 1px solid #DBDEEC;
@@ -102,6 +103,11 @@
         }
     }
 
+    &__block:hover .news-cards__content {
+        // position: static;
+        transform: translateY(-6px);
+    }
+
     &__block:hover &__link {
         // position: static;
         bottom: 20px;
@@ -112,7 +118,8 @@
     }
 
     &__block:hover &__img {
-        height: 180px;
+        // height: 180px;
+        transform: scale(1);
 
         @media (max-width: 726px) {
             height: 200px;
@@ -139,10 +146,12 @@
     &__content {
         @include flex(column, flex-start);
         padding: 25px 25px 20px;
+        transition: all .2s linear;
 
         @media (max-width: 726px) {
             height: 100%;
             justify-content: space-between;
+            transform: translateY(-6px);
         }
     }
 
@@ -151,10 +160,12 @@
         width: 330px;
         object-fit: cover;
         transition: all .2s linear;
+        transform: scale(1.05);
 
         @media (max-width: 726px) {
             width: 100%;
             max-width: 432px;   
+            transform: scale(1);
         }
     }
 
@@ -177,16 +188,16 @@
         }
     }
 
-    &__bottom-white {
-        position: absolute;
-        height: 80px;
-        width: 100%;
-        bottom: 0;
-        background: linear-gradient(180deg, rgba(255, 255, 255, 0.00) 0%, #FFF 100%);
-        z-index: 1;
+    // &__bottom-white {
+    //     position: absolute;
+    //     height: 80px;
+    //     width: 100%;
+    //     bottom: 0;
+    //     background: linear-gradient(180deg, rgba(255, 255, 255, 0.00) 0%, #FFF 100%);
+    //     z-index: 1;
 
-        @media (max-width: 726px) {
-            display: none;
-        }
-    }
+    //     @media (max-width: 726px) {
+    //         display: none;
+    //     }
+    // }
 }

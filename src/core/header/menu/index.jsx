@@ -45,7 +45,6 @@ const Menu = ({ open, toggleMenu }) => {
             <div className={`menu__container ${open ? 'menu__container--opened' : ''}`}>
                 <div className='menu__header'>
                     <IconClose className='menu__close' onClick={() => close()} />
-                    <span className='menu__border'></span>
                     <Link className='menu__icon' to='/'><Icon /></Link>
                 </div>
                 <div className="menu__links">

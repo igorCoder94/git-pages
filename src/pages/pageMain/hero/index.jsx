@@ -1,8 +1,11 @@
 import './style.scss';
 import eagleColored from '../../../assets/icons/pageMain/hero/eagle-colored.svg';
 import gazprom from '../../../assets/icons/pageMain/hero/gazprom.svg';
-import gazpromOil from '../../../assets/icons/pageMain/hero/gazprom-oil.svg'
-import oneC from '../../../assets/icons/pageMain/hero/1c.svg'
+import gov from '../../../assets/icons/pageMain/hero/gov.png';
+import oneC from '../../../assets/icons/pageMain/hero/1c.png';
+import { ReactComponent as OneC } from '../../../assets/icons/pageMain/hero/oneC.svg';
+import { ReactComponent as Gazprom } from '../../../assets/icons/pageMain/hero/gazprom.svg';
+import { ReactComponent as GazpromOil } from '../../../assets/icons/pageMain/hero/gazprom-oil.svg';
 import { ReactComponent as IconGov } from '../../../assets/icons/pageMain/hero/gov.svg';
 import { ReactComponent as IconEagleMobile } from '../../../assets/icons/pageMain/hero/eagle-mobile.svg';
 import { Swiper, SwiperSlide } from 'swiper/react';
@@ -182,19 +185,31 @@ const Hero = () => {
 
             { !isMobile ? 
             <div className='hero__partners'>
-                <img src={gazprom} alt="" />
-                <img src={gazpromOil} alt="" />
-                <img src={oneC} alt="" />
-                <IconGov />
+                 <div className='hero__partners-img'>
+                    <Gazprom />
+                 </div>
+                 <div className='hero__partners-img'>
+                    <GazpromOil />                
+                 </div>
+                 <div className='hero__partners-img'>
+                    <img style={{ height: '100%' }} src={oneC} alt='' />
+                 </div>   
+                 <div className='hero__partners-img'>
+                    <img src={gov} alt='' />
+                 </div> 
             </div> : 
             <div className='hero__partners-mobile'>
                 <div className='hero__partners-line'>
-                    <img className='hero__partners-icon' src={gazprom} alt="" />
-                    <img className='hero__partners-icon' src={gazpromOil} alt="" />
+                    <Gazprom className='hero__partners-img' />
+                    <GazpromOil className='hero__partners-img' />
                 </div>
                 <div className='hero__partners-line'>
-                    <img className='hero__partners-icon' src={oneC} alt="" />
-                    <IconGov className='hero__partners-icon' />
+                    <div className='hero__partners-img'>
+                        <img style={{ width: '100%' }} src={oneC} alt='' />
+                    </div>
+                    <div className='hero__partners-img'>
+                        <img style={{ width: '100%' }} src={gov} alt='' />
+                    </div>
                 </div>
             </div>
             }
@@ -215,9 +230,14 @@ const Hero = () => {
                 </div>
             </div>  
             }
-
-            <Borders />    
         </div>
+        <div className='background'> 
+            {/* <div className='tr-one'></div>
+            <div className='tr-two'></div> */}
+        </div>
+        <div className='borders-container'>
+                <Borders /> 
+        </div>  
     </section>
 }
 
