@@ -34,6 +34,10 @@
         margin-bottom: 40px;
         box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.10), 0px 6px 10px 0px rgba(0, 5, 50, 0.15);
 
+        @media (max-width: 340px) {
+            min-width: 100%;
+        }
+
         &-mobile {
             flex: none;
             margin-bottom: 70px;

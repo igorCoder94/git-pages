@@ -4,14 +4,10 @@ import hub from '../../../assets/icons/pageMain/scada/hub.svg';
 import ai from '../../../assets/icons/pageMain/scada/ai.svg';
 import smart from '../../../assets/icons/pageMain/scada/smart.svg';
 import report from '../../../assets/icons/pageMain/scada/report.svg';
-import settings from '../../../assets/icons/pageMain/scada/settings.svg';
-import table from '../../../assets/icons/pageMain/scada/table.svg';
-import video from '../../../assets/icons/pageMain/scada/video.svg';
 import Borders from '../../../shared/borders';
 import { ReactComponent as IconScheme } from '../../../assets/images/main/scada/111.svg';
 import { ReactComponent as IconSchemeMobile } from '../../../assets/images/main/scada/scheme-mobile.svg';
 import { useMediaQuery } from '@react-hook/media-query';
-import { useEffect, useState } from 'react';
 
 const listOne = [
     {
@@ -107,9 +103,6 @@ const Services = () => {
                     <IconSchemeMobile className='scada__scheme'/>
                     <IconSchemeMobile className='scada__scheme-mobile'/>
                 </div>
-            {/* <div className='scada__border-left'></div>
-            <div className='scada__border-right'></div>
-            <div className='scada__border-middle'></div> */}
             <Borders />
         </div>
     </section>

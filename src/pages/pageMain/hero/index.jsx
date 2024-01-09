@@ -24,6 +24,9 @@ import 'swiper/css/pagination';
 import 'swiper/css/effect-fade';
 import 'swiper/css';
 import BordersHero from '../../../shared/borders-hero';
+import { ReactComponent as IconLeftTriangle } from '../../../assets/images/backgrounds/left-triangle.svg';
+import { ReactComponent as IconRightTriangle } from '../../../assets/images/backgrounds/right-triangle.svg';
+
 
 const Hero = () => {
     const isTablet = useMediaQuery('(max-width: 1100px)');
@@ -231,19 +234,21 @@ const Hero = () => {
             </div>  
             }
         </div>
+
         <div className='borders-container'>
             <BordersHero /> 
         </div>  
+
+        <div className='background-triangles'>
+            <div className='background-inner'></div>
+            <div className='tr-one'></div>
+            <div className='tr-two'></div>
+        </div>
+
         <div className='final-triangle'>
 
         </div>
-        <div className='background-white'> 
-        </div>
-        <div className='background-triangles'>
-            <div className='background-inner'></div>
-            { !isMobile ? <><div className='tr-one'></div>
-            <div className='tr-two'></div></> : null }
-        </div>
+        <div className='background-white'></div>
         {/* <div className='tr-one'></div>
         <div className='tr-two'></div> */}
     </section>

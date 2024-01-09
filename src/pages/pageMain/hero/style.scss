@@ -581,19 +581,19 @@
 .final-triangle {
     position: absolute;
     display: inline-block;
-    border-bottom: 444px solid #FFF;
-    border-left: 100vw solid transparent;
+    border-bottom: 445px solid #FFF;
+    border-left: calc(100vw + 10px) solid transparent;
     top: -31px;
-    left: 0;
+    left: -8px;
     z-index: -2;
 
     @media (max-width: 800px) {
         position: absolute;
         display: inline-block;
-        border-bottom: 81px solid #FFF;
-        border-left: 100vw solid transparent;
+        border-bottom: 82px solid #FFF;
+        border-left: calc(100vw + 8px) solid transparent;
         top: 161px;
-        left: 0;
+        left: -6px;
         z-index: -2;
     }
 }
@@ -601,16 +601,26 @@
 .background-white {
     position: absolute;
     background: white;
-    height: 200vh;
+    height: 102%;
     width: 100vw;
-    top: 412px;
+    top: 413px;
     left: 0;
     z-index: -2;
+
+    @media (max-width: 1442px) {
+        position: absolute;
+        background: white;
+        height: 102%;
+        width: 100vw;
+        top: 413px;
+        left: 0;
+        z-index: -2;
+    }
 
     @media (max-width: 800px) {
         position: absolute;
         background: white;
-        height: 1000vh;
+        height: 102%;
         width: 100vw;
         top: 242px;
         left: 0;
@@ -621,6 +631,7 @@
 .background-triangles {
     position: absolute;
     // border: 1px solid black;
+    background: blue;
     top: -121px;
     left: 0;
     width: 100vw;
@@ -634,112 +645,176 @@
 }
 
 .background-inner {
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    padding: 15px;
+    height: 100vh;
+    width: 100vw;
     background: radial-gradient(91.01% 98.76% at 48.71% 49.95%, #24CAFF 9.8%, #0075FF 100%);
     z-index: -3;
 }
 
-.tr-two {
-    position: absolute;
-    height: 100%;
-    width: 100vh;
-    border: 500vw solid transparent;
-    border-image: linear-gradient(-142deg, #3378FF 33.59%, #B6CAFF 48.26%);
-    border-image-repeat: stretch;
-    animation: animationtwo infinite 20s;
-    animation-delay: 3s;
-    rotate: 32deg;
-    left: -156vw;
-    z-index: -2;
-
-    @media (max-width: 800px) {
-        animation: none;
-        left: -149vw;
+@keyframes tr-one-animation {
+    0% {
+      left: 20px;
+      rotate: 26deg;
     }
-}  
 
-// .tr-one {
-//     position: absolute;
-//     // width: 0px;
-//     // height: 0px;
-//     top: -249vh;
-//     left: -235vw;
-//     border-top: 500vh solid rgba(0, 71, 255, 0.20);
-//     border-left: 500vw solid transparent;
-//     box-shadow: 128px 0px 105px 0px rgba(0, 71, 255, 0.08) inset;
-//     // filter: drop-shadow(-60px 0px 200px rgba(0, 166, 255, 0.30));
-//     // animation: animation infinite 30s;
-//     animation-delay: 1s;
-//     z-index: -1;
-//     rotate: -8deg
-//   }
+    30% {
+      left: -500px;
+      rotate: 26deg;
+    }
+
+    60% {
+      left: -500px;
+      rotate: 36deg;
+    }
+
+    80% {
+      left: 20px;
+      rotate: 36deg;
+    }
+
+    100% {
+      left: 20px;
+      rotate: 26deg;
+    }
+}
+
+@keyframes tr-one-animation-mobile {
+    0% {
+      left: 20px;
+      rotate: 26deg;
+    }
+
+    30% {
+      left: -80px;
+      rotate: 26deg;
+    }
+
+    60% {
+      left: -80px;
+      rotate: 36deg;
+    }
+
+    80% {
+      left: -20px;
+      rotate: 36deg;
+    }
+
+    100% {
+      left: 20px;
+      rotate: 26deg;
+    }
+}
 
 .tr-one {
     position: absolute;
-    top: 0;
-    left: 0;
-    top: -249vh;
-    left: -235vw;
+    top: -1140px;
+    left: 20px;
+    width: 200%;
+    height: 200%;
+    background: rgba(0, 71, 255, 0.20);
     box-shadow: 128px 0px 105px 0px rgba(0, 71, 255, 0.08) inset;
     filter: drop-shadow(-60px 0px 200px rgba(0, 166, 255, 0.30));
-    // animation: animation infinite 20s;
-    // animation-delay: 1s;
-    border-top: 500vh solid rgba(0, 71, 255, 0.20);
-    border-left: 500vw solid transparent;
-    rotate: -8deg;
+    animation: tr-one-animation 25s infinite ease-in-out;
+    rotate: 26deg;
+    z-index: 2;
 
     @media (max-width: 800px) {
-        position: absolute;
-        top: 0;
-        left: 0;
-        top: -240vh;
-        left: -190vw;
-        box-shadow: 128px 0px 105px 0px rgba(0, 71, 255, 0.08) inset;
-        filter: drop-shadow(-60px 0px 200px rgba(0, 166, 255, 0.3));
-        border-top: 500vh solid rgba(0, 71, 255, 0.2);
-        border-left: 500vw solid transparent;
-        rotate: -23deg;
+        top: -1445px;
+        width: 320%;
+        animation: tr-one-animation-mobile 15s infinite ease-in-out;
+    }
+
+    @media (max-width: 430px) {
+        top: -1445px;
+        width: 320%;
     }
 }
 
-@keyframes animation {
+@keyframes animation-2 {
     0% {
-      top: -249vh;
-      rotate: -8deg
+      left: -100px;
+      rotate: 120deg;
     }
-
-    50% {
-      top: -200vh;
-      rotate: -8deg
+  
+    30% {
+      left: -200px;
+      rotate: 120deg;
     }
-
+  
+    60% {
+      left: -500px;
+      rotate: 100deg;
+    }
+  
     80% {
-      top: -200vh;
-      left: -200vw;
-      rotate: -8deg
+      left: -300px;
+      rotate: 120deg;
     }
-
+  
     100% {
-      top: -249vh;
-      rotate: -8deg
+      left: -100px;
     }
-}
+  }
 
-@keyframes animationtwo {
+  @keyframes animation-2-mobile {
     0% {
-        left: -156vw;
+        top: -120px;
+        left: 400px;
+        height: 156%;
     }
-
+  
+    30% {
+        top: -220px;
+        left: 400px;
+        height: 156%;
+    }
+  
+    60% {
+        top: -220px;
+        left: 350px;
+        height: 156%;
+    }
+  
     80% {
-        left: -186vw;
+        top: -120px;
+        left: 400px;
+        height: 156%;
+    }
+  
+    100% {
+        top: -120px;
+        left: 400px;
+        height: 156%;
+    }
+  }  
+
+.tr-two {
+    top: 0;
+    left: -100px;
+    position: absolute;
+    height: 200%;
+    width: 200%;
+    background: linear-gradient(-61deg, #3378FF 33.59%, #50DFFF 48.26%);
+    /* filter: drop-shadow(-61px 4px 200px
+  px
+  rgba(0, 41, 255, 0.58)); */
+    rotate: 0;
+    z-index: 1;
+    animation: animation-2 30s infinite ease-in-out;
+    rotate: 120deg;
+
+    @media (max-width: 800px) {
+        top: -120px;
+        left: 400px;
+        height: 156%;
+        animation: animation-2-mobile 30s infinite ease-in-out;
+        background: linear-gradient(140deg, #3378FF 33.59%, #50DFFF 48.26%);
     }
 
-    100% {
-        left: -156vw;
+    @media (max-width: 430px) {
+        top: -120px;
+        left: 400px;
+        height: 156%;
+        background: linear-gradient(140deg, #3378FF 33.59%, #50DFFF 48.26%);
     }
-}
+  }  

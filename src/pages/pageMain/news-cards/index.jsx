@@ -4,6 +4,64 @@ import newsVersion from '../../../assets/images/main/version.png';
 import newsCase from '../../../assets/images/main/case.png';
 import Borders from '../../../shared/borders/index';
 
+const newsData = [
+    {
+        date: '23 Декабря 2022 года',
+        title: 'До конца 2023 года переходим на версию 3.0',
+        content: [
+            {
+                text: ['Команда FTXCom выпускает новую улучшенную версию платформы.'],
+                isList: false,
+            },
+            {
+                text: ['Выпуск планируется в середине четвертого квартала 2023 год'],
+                isList: false,
+            }
+        ],
+    },
+    {
+        date: '19 Декабря 2022 года',
+        title: 'Обновление ПО до версии Beta 2.2.0',
+        content: [{
+            text: ['Команда FTXCom выпускает новую улучшенную версию платформы.'],
+            isList: false,
+        },
+        {
+            text: ['Выпуск планируется в середине четвертого квартала 2023 год'],
+            isList: false,
+        }
+    ],
+    },
+    {
+        date: '23 Декабря 2022 года',
+        title: 'До конца 2023 года переходим на версию 3.0',
+        content: [{
+            text: ['Команда FTXCom выпускает новую улучшенную версию платформы.'],
+            isList: false,
+        },
+        {
+            text: ['Выпуск планируется в середине четвертого квартала 2023 год'],
+            isList: false,
+        }
+    ],
+    },
+];
+
+const NewsCard = () => {
+    return (
+    <div className='news-cards__block'>
+        <img className='news-cards__img' src={newsUnios} alt="" />
+        <div className='news-cards__content'>
+            <div className='news-cards__text'>23 Декабря 2022 года</div>
+            <div className='news-cards__subtitle'>До конца 2023 года переходим на версию 3.0</div>
+            <div className='news-cards__text'>Команда FTXCom выпускает новую улучшенную версию платформы. </div>
+            <div className='news-cards__text'>Выпуск планируется в середине четвертого квартала 2023 год</div>
+            {/* <div className='news-cards__link'>Подробнее ></div> */}
+        </div>
+        <div className='news-cards__bottom-white'></div>
+</div>)
+}
+
 const NewsCards = () => {
     return <section className='news-cards__section'>
         <div className='news-cards__container container'>
@@ -13,7 +71,7 @@ const NewsCards = () => {
                     <div className='news-cards__content'>
                         <div className='news-cards__text'>23 Декабря 2022 года</div>
                         <div className='news-cards__subtitle'>До конца 2023 года переходим на версию 3.0</div>
-                        <div className='news-cards__text'>Команда FTXCom выпускает новую улучшенную версию платформы. </div>
+                        <div className='news-cards__text'>Команда FTXCom выпускает новую улучшенную версию платформы.</div>
                         <div className='news-cards__text'>Выпуск планируется в середине четвертого квартала 2023 год</div>
                         {/* <div className='news-cards__link'>Подробнее ></div> */}
                     </div>
