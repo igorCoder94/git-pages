@@ -1,0 +1,49 @@
+.border-hero {
+    position: absolute;    
+    border-left: 1px dashed rgba(221, 225, 236, .5);
+    z-index: 333;
+    top: 410px;
+    height: calc(100% - 410px);
+    z-index: -1;
+
+    &-block {
+        position: absolute;
+        top: 0;
+        left: -5px;
+        width: 10px;
+        height: 50px;
+        background: linear-gradient(white, transparent);
+    }
+
+    &__left {
+        left: 0%;
+
+        @media (max-width: 800px) {
+            left: 15px;
+            top: 242px;
+            height: calc(100% - 242px);
+        }
+    }
+    
+    &__left-middle {
+        left: 25%;
+    }
+    
+    &__middle {
+        left: 50%;
+    }
+    
+    &__right-middle {
+        left: 75%;
+    }
+    
+    &__right {
+        right: 0%;
+
+        @media (max-width: 800px) {
+            right: 15px;
+            top: 242px;
+            height: calc(100% - 242px);
+        }
+    }
+}

@@ -13,10 +13,11 @@
     @include flex(row, center, center);
     // margin-top: 30px;
     align-items: center;
+    // padding: 30px;
     flex: 0 0 auto;
     width: 100%;
-    background: rgba(255, 255, 255, 0.10); 
-    backdrop-filter: blur(20px);
+    // background: rgba(255, 255, 255, 0.10); 
+    // backdrop-filter: blur(20px);
     z-index: 2;
 
     @media (max-width: 800px) {
@@ -25,19 +26,22 @@
 
     &-light {
         color: black;
-        background: white;
+        background: #F6F9FC;
+        border-bottom: 1px dashed rgba(221, 225, 236, 0.5);
     }
 
     &__container {
+        position: relative;
         @include flex(row, space-between, center);
         max-width: 1080px;
+        padding-left: 15px;
         width: 100%;
-        min-height: 60px;
-        padding: 0 15px;
+        min-height: 121px;
 
-        @media (max-width: 800px) {
-            min-height: 46px;
-            padding: 15px;
+        @media (max-width: 1143px) {
+            min-height: 0;
+            padding: 30px 0;
+            padding-left: 0;
         }
     }
 
@@ -45,6 +49,7 @@
         @include flex();
         cursor: pointer;
         margin-right: 30px;
+        transition: .2s;
 
         &--mobile {
             justify-self: flex-start
@@ -52,7 +57,16 @@
 
         &-container {
             @include flex(row, null, center);
+
+            @media (max-width: 260px) {
+                display: none;
+            }
         }
+    }
+
+    &__transform {
+        visibility: hidden;
+        opacity: 0;
     }
 
     &__signin {
@@ -80,7 +94,7 @@
             border-radius: 100px;
             background: rgba(255, 255, 255, 0.20);
             height: 36px;
-            padding: 0 14px;
+            padding: 0 15px;
             transition: all linear .2s;
 
             &:hover {
@@ -89,12 +103,23 @@
         }
     }
 
+    &__icons {
+        @include flex(row, center, center, nowrap);
+        gap: 10px;
+    }
+
     &__burger {
-        @include flex(row, flex-start, center);
+        @include flex(row, space-between, center, nowrap);
+        width: 100%;
         gap: 15px;
 
         &-icon {
             cursor: pointer;
+        }
+
+        @media (max-width: 1143px) {
+            padding-left: 30px;
+            padding-right: 12px;
         }
     }
 

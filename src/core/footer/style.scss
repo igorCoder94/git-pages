@@ -8,9 +8,11 @@
     flex: 0 0 auto;
     width: 100%;
     color: #373868;
+    padding: 0 15px;
     font-weight: 600;
     backdrop-filter: blur(25px);
     z-index: 1;
+    background: white;
 
     &__container {
         position: relative;
@@ -27,8 +29,6 @@
     &__icon {
         @include flex();
         margin-bottom: 54px;
-    }@media (max-width: 800px) {
-        padding: 0 15px 60px;
     }
 
     &__phone {
@@ -90,6 +90,7 @@
 
             @media (max-width: 800px) {
                 padding-left: 0;
+                margin-bottom: 60px;
             }
         }
 
@@ -103,7 +104,7 @@
     }
 
     &__copyright {
-        font-family: var(--font-family-segoe);
+        font-weight: 400;
     }
 
     &__link {

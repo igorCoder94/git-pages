@@ -4,32 +4,28 @@ import NewsCards from './news-cards';
 import Toir from './toir';
 import Control from './control';
 import News from './news';
-import Join from './join';
-import HeroMobile from './hero-mobile';
-import { useMediaQuery } from '@react-hook/media-query';
-import { Helmet } from 'react-helmet';
+import Join from '../../shared/join';
+import { HelmetProvider } from 'react-helmet-async';
 import Integration from './integration';
+import './style.scss';
 
-const PageMain = () => {
-    const isMobile = useMediaQuery('(max-width: 800px)');
-
+const PageMain = ({ togglePopup }) => {
     return (
-        <>
-            <Helmet>
+        <div style={{ position: 'relative' }}>
+            <HelmetProvider>
                 <title>Unios - Сервис для автоматизации эксплуатации объектов</title>
                 <meta name="description" content="Unios - сервис автоматизации эксплуатации и технического обслуживания оборудования. Мониторинг, Диспетчеризация, Техническое обслуживание и Ремонт оборудования" />
                 <meta name="keywords" content="автоматизация, IoT, ТОиР, диспетчеризация, мониторинг, сервис, эксплуатация, обслуживание, оборудование, Эф-Ти-Икс-Ком, FTXCom, Unios, Юниос, ЭФ ТИ ИКС КОМ, SCADA, API, CCTV, видеонаблюдение, аварийные ситуации, устройство, объект" />
-            </Helmet>
-            {/* {isMobile ? <HeroMobile /> : <Hero />} */}
+            </HelmetProvider>
             <Hero />
             <Scada />
             <Toir />
-            <Integration />
             <Control />
+            <Integration />
             <News />
             <NewsCards />
-            <Join />
-        </>
+            <Join togglePopup={togglePopup} />
+        </div>
     )
 }
 
