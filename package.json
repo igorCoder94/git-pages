@@ -12,7 +12,6 @@
     "async": "^3.2.5",
     "axios": "^1.6.1",
     "helmet": "^7.1.0",
-    "prettier": "^3.1.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-helmet": "^6.1.0",
@@ -32,6 +31,7 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "predeploy": "npm run build",
+    "prettier": "prettier --write .",
     "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
@@ -54,6 +54,7 @@
   },
   "devDependencies": {
     "gh-pages": "^5.0.0",
+    "prettier": "3.1.1",
     "sass": "^1.63.6"
   }
 }

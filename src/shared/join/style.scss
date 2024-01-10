@@ -1,115 +1,115 @@
-@import '../../assets/styles/mixins/flex.scss';
-@import '../../assets/styles/typography.scss';
+@import "../../assets/styles/mixins/flex.scss";
+@import "../../assets/styles/typography.scss";
 
 .join {
-    &__section {
-        background: #EEF3F9;
-        position: relative;
+  &__section {
+    background: #eef3f9;
+    position: relative;
+  }
+
+  &__title {
+    margin-bottom: 20px;
+  }
+
+  &__title-container {
+    @include flex(column, flex-start, flex-start, nowrap);
+  }
+
+  &__container {
+    position: relative;
+    @include flex(row, flex-start, flex-start, nowrap);
+    padding-bottom: 200px;
+    padding-top: 100px;
+    gap: 22%;
+    font-family: var(--font-family-segoe);
+    z-index: 1;
+
+    @media (max-width: 1000px) {
+      flex-direction: column;
+      padding-top: 80px;
+      gap: 34px;
+    }
+  }
+
+  &__description {
+    font-family: var(--font-family-uni-sans);
+    font-size: 16px;
+    max-width: 337px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+  }
+
+  &__docs {
+    @include flex(row, space-between, flex-start, nowrap);
+    margin-right: -15px;
+
+    @media (max-width: 544px) {
+      flex-direction: column;
+    }
+  }
+
+  &__img {
+    margin-bottom: 15px;
+  }
+
+  &__yellow {
+    padding-left: 15px;
+    min-width: 268px;
+
+    @media (max-width: 1000px) {
+      padding-left: 0;
+      gap: 74px;
     }
 
-    &__title {
-        margin-bottom: 20px;
+    @media (max-width: 544px) {
+      margin-top: 40px;
     }
+  }
 
-    &__title-container {
-        @include flex(column, flex-start, flex-start, nowrap);
+  &__text {
+    font-family: var(--font-family-uni-sans);
+    font-size: 16px;
+    max-width: 288px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin-bottom: 14px;
+  }
+
+  &__text-yellow {
+    font-family: var(--font-family-uni-sans);
+    font-size: 16px;
+    max-width: 391px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin-bottom: 14px;
+  }
+
+  &__link {
+    font-size: 15px;
+    color: #0063e7;
+    font-weight: 600;
+    line-height: 18px;
+    transition: 0.2s;
+    cursor: pointer;
+
+    &:hover {
+      opacity: 0.3;
     }
-    
-    &__container {
-        position: relative;
-        @include flex(row, flex-start, flex-start, nowrap);
-        padding-bottom: 200px;
-        padding-top: 100px;
-        gap: 22%;
-        font-family: var(--font-family-segoe);
-        z-index: 1;
-        
-        @media (max-width: 1000px) {
-            flex-direction: column;
-            padding-top: 80px;
-            gap: 34px;
-        }
-    }
+  }
 
-    &__description {
-        font-family: var(--font-family-uni-sans);
-        font-size: 16px;
-        max-width: 337px;
-        font-style: normal;
-        font-weight: 400;
-        line-height: normal;
-    }
+  &__rectangle {
+    transform: rotate(-5deg);
+    position: absolute;
+    bottom: -150px;
+    width: 110%;
+    height: 315px;
+    background: white;
+  }
 
-    &__docs {
-        @include flex(row, space-between, flex-start, nowrap);
-        margin-right: -15px;
-
-        @media (max-width: 544px) {
-            flex-direction: column;
-        }
-    }
-
-    &__img {
-        margin-bottom: 15px;
-    }
-
-    &__yellow {
-        padding-left: 15px;
-        min-width: 268px;
-
-        @media (max-width: 1000px) {
-            padding-left: 0;
-            gap: 74px;
-        }
-        
-        @media (max-width: 544px) {
-            margin-top: 40px;
-        }
-    }
-
-    &__text {
-        font-family: var(--font-family-uni-sans);
-        font-size: 16px;
-        max-width: 288px;
-        font-style: normal;
-        font-weight: 400;
-        line-height: normal;
-        margin-bottom: 14px;
-    }
-
-    &__text-yellow {
-        font-family: var(--font-family-uni-sans);
-        font-size: 16px;
-        max-width: 391px;
-        font-style: normal;
-        font-weight: 400;
-        line-height: normal;
-        margin-bottom: 14px;
-    }
-
-    &__link {
-        font-size: 15px;
-        color: #0063E7;
-        font-weight: 600;
-        line-height: 18px;
-        transition: .2s;
-        cursor: pointer;
-
-        &:hover {
-            opacity: .3;
-        }
-    }
-
-    &__rectangle {
-        transform: rotate(-5deg);
-        position: absolute;
-        bottom: -150px;
-        width: 110%;
-        height: 315px;
-        background: white;
-    }
-
-    &__links {
-        @include flex(column);
-    }
+  &__links {
+    @include flex(column);
+  }
 }

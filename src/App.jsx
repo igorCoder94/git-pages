@@ -1,13 +1,13 @@
-import './App.scss';
+import "./App.scss";
 import { Route, Routes } from "react-router-dom";
 import PageRequest from "./pages/pageRequest";
 import PageMain from "./pages/pageMain";
-import Header from './core/header';
-import Footer from './core/footer';
-import { useLocation } from 'react-router-dom';
-import { useState, useEffect } from 'react';
-import Menu from './core/header/menu';
-import ConnectUs from './shared/popups/connect-us';
+import Header from "./core/header";
+import Footer from "./core/footer";
+import { useLocation } from "react-router-dom";
+import { useState, useEffect } from "react";
+import Menu from "./core/header/menu";
+import ConnectUs from "./shared/popups/connect-us";
 
 function App() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -17,10 +17,10 @@ function App() {
 
   function chooseBackgroundClass() {
     switch (location.pathname) {
-      case '/':
-        return 'background__main';
+      case "/":
+        return "background__main";
       default:
-        return 'background__dark';
+        return "background__dark";
     }
   }
 
@@ -30,7 +30,7 @@ function App() {
 
       return;
     }
-    setIsMenuOpen(prevState => !prevState);
+    setIsMenuOpen((prevState) => !prevState);
   }
 
   function togglePopup(close) {
@@ -39,39 +39,52 @@ function App() {
 
       return;
     }
-    setIsPopupOpen(prevState => !prevState);
+    setIsPopupOpen((prevState) => !prevState);
   }
 
   useEffect(() => {
-    document.getElementById('App__container').scrollTo({
+    document.getElementById("App__container").scrollTo({
       top: 0,
-      behavior: 'instant',
+      behavior: "instant",
     });
 
     setTimeout(() => {
       if (location.hash) {
         document.getElementById(location.hash.slice(1)).scrollIntoView({
-          behavior: 'smooth',
+          behavior: "smooth",
         });
       }
     }, 200);
-  }, [location.pathname]);
+  }, [location.hash]);
 
   return (
     <div className="App">
-      <div id='App__container' className={`App__container ${chooseBackgroundClass()}`}>
-        <Header toggleMenu={toggleMenu} togglePopup={togglePopup} isMenuOpen={isMenuOpen}/>
+      <div
+        id="App__container"
+        className={`App__container ${chooseBackgroundClass()}`}
+      >
+        <Header
+          toggleMenu={toggleMenu}
+          togglePopup={togglePopup}
+          isMenuOpen={isMenuOpen}
+        />
         <main>
           <Routes>
-            <Route path="/" element={<PageMain togglePopup={togglePopup} />} ></Route>
-            <Route path="/request" element={<PageRequest togglePopup={togglePopup} />} ></Route>
+            <Route
+              path="/"
+              element={<PageMain togglePopup={togglePopup} />}
+            ></Route>
+            <Route
+              path="/request"
+              element={<PageRequest togglePopup={togglePopup} />}
+            ></Route>
           </Routes>
         </main>
         <Footer togglePopup={togglePopup} />
       </div>
-      {isMenuOpen || isPopupOpen ? <div className='overlay-dark'></div> : null}
+      {isMenuOpen || isPopupOpen ? <div className="overlay-dark"></div> : null}
       {isPopupOpen ? <ConnectUs togglePopup={togglePopup} /> : null}
-      <Menu open={isMenuOpen} toggleMenu={toggleMenu}/>
+      <Menu open={isMenuOpen} toggleMenu={toggleMenu} />
     </div>
   );
 }

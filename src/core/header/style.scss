@@ -1,133 +1,133 @@
-@import '../../assets/styles/mixins/flex.scss';
-@import '../../assets/styles/typography.scss';
+@import "../../assets/styles/mixins/flex.scss";
+@import "../../assets/styles/typography.scss";
 
 .header {
+  position: relative;
+  top: 0;
+  color: white;
+  font-family: var(--font-family-roboto);
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  @include flex(row, center, center, nowrap);
+  // margin-top: 30px;
+  align-items: center;
+  // padding: 30px;
+  flex: 0 0 auto;
+  width: 100%;
+  // background: rgba(255, 255, 255, 0.10);
+  // backdrop-filter: blur(20px);
+  z-index: 2;
+  font-display: block;
+
+  @media (max-width: 800px) {
+    margin-top: 0;
+  }
+
+  &-light {
+    color: black;
+    background: #f6f9fc;
+    border-bottom: 1px dashed rgba(221, 225, 236, 0.5);
+  }
+
+  &__container {
     position: relative;
-    top: 0;
-    color: white;
-    font-family: var(--font-family-roboto);
-    font-size: 15px;
-    font-style: normal;
-    font-weight: 700;
-    line-height: normal;
-    @include flex(row, center, center, nowrap);
-    // margin-top: 30px;
-    align-items: center;
-    // padding: 30px;
-    flex: 0 0 auto;
+    @include flex(row, space-between, center, nowrap);
+    max-width: 1080px;
+    padding-left: 15px;
     width: 100%;
-    // background: rgba(255, 255, 255, 0.10); 
-    // backdrop-filter: blur(20px);
-    z-index: 2;
+    min-height: 121px;
     font-display: block;
 
-    @media (max-width: 800px) {
-        margin-top: 0;
+    @media (max-width: 1143px) {
+      min-height: 0;
+      padding: 30px 0;
+      padding-left: 0;
+    }
+  }
+
+  &__logo {
+    @include flex();
+    cursor: pointer;
+    margin-right: 30px;
+    transition: 0.2s;
+
+    &--mobile {
+      justify-self: flex-start;
     }
 
-    &-light {
-        color: black;
-        background: #F6F9FC;
-        border-bottom: 1px dashed rgba(221, 225, 236, 0.5);
+    &-container {
+      @include flex(row, null, center, nowrap);
+
+      @media (max-width: 260px) {
+        display: none;
+      }
+    }
+  }
+
+  &__transform {
+    visibility: hidden;
+    opacity: 0;
+  }
+
+  &__signin {
+    @include flex(row, flex-start, center, nowrap);
+    gap: 30px;
+    cursor: pointer;
+    transition: all linear 0.2s;
+  }
+
+  &-nav {
+    @include flex(row, space-between, null, nowrap);
+    gap: 30px;
+    margin-right: 80px;
+
+    &__link {
+      transition: all linear 0.2s;
+
+      &:hover {
+        opacity: 0.5;
+      }
     }
 
-    &__container {
-        position: relative;
-        @include flex(row, space-between, center, nowrap);
-        max-width: 1080px;
-        padding-left: 15px;
-        width: 100%;
-        min-height: 121px;
-        font-display: block;
+    &__connect {
+      @include flex(column, center, center, nowrap);
+      border-radius: 100px;
+      background: rgba(255, 255, 255, 0.2);
+      height: 36px;
+      padding: 0 15px;
+      transition: all linear 0.2s;
 
-        @media (max-width: 1143px) {
-            min-height: 0;
-            padding: 30px 0;
-            padding-left: 0;
-        }
+      &:hover {
+        opacity: 0.5;
+      }
+    }
+  }
+
+  &__icons {
+    @include flex(row, center, center, nowrap);
+    gap: 10px;
+  }
+
+  &__burger {
+    @include flex(row, space-between, center, nowrap);
+    width: 100%;
+    gap: 15px;
+
+    &-icon {
+      cursor: pointer;
     }
 
-    &__logo {
-        @include flex();
-        cursor: pointer;
-        margin-right: 30px;
-        transition: .2s;
-
-        &--mobile {
-            justify-self: flex-start
-        }
-
-        &-container {
-            @include flex(row, null, center, nowrap);
-
-            @media (max-width: 260px) {
-                display: none;
-            }
-        }
+    @media (max-width: 1143px) {
+      padding-left: 30px;
+      padding-right: 12px;
     }
+  }
 
-    &__transform {
-        visibility: hidden;
-        opacity: 0;
-    }
-
-    &__signin {
-        @include flex(row, flex-start, center, nowrap);
-        gap: 30px;
-        cursor: pointer;
-        transition: all linear .2s;
-    }
-
-    &-nav {
-        @include flex(row, space-between, null, nowrap);
-        gap: 30px;
-        margin-right: 80px;
-
-        &__link {
-            transition: all linear .2s;
-
-            &:hover {
-                opacity: .5;
-            }
-        }
-
-        &__connect {
-            @include flex(column, center, center, nowrap);
-            border-radius: 100px;
-            background: rgba(255, 255, 255, 0.20);
-            height: 36px;
-            padding: 0 15px;
-            transition: all linear .2s;
-
-            &:hover {
-                opacity: .5;
-            }
-        }
-    }
-
-    &__icons {
-        @include flex(row, center, center, nowrap);
-        gap: 10px;
-    }
-
-    &__burger {
-        @include flex(row, space-between, center, nowrap);
-        width: 100%;
-        gap: 15px;
-
-        &-icon {
-            cursor: pointer;
-        }
-
-        @media (max-width: 1143px) {
-            padding-left: 30px;
-            padding-right: 12px;
-        }
-    }
-
-    &__border {
-        border-right: 1px solid white;
-        height: 16px;
-        opacity: .3;
-    }
+  &__border {
+    border-right: 1px solid white;
+    height: 16px;
+    opacity: 0.3;
+  }
 }

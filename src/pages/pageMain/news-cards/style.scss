@@ -1,205 +1,206 @@
-@import '../../../assets/styles/mixins/flex.scss';
-@import '../../../assets/styles/typography.scss';
+@import "../../../assets/styles/mixins/flex.scss";
+@import "../../../assets/styles/typography.scss";
 
 .news-cards {
-    &__section {
-        background: #F9F9F9;
+  &__section {
+    background: #f9f9f9;
+  }
+
+  &__container {
+    position: relative;
+    color: var(--color-text-main);
+    padding-top: 100px;
+    padding-bottom: 100px;
+    z-index: 1;
+
+    @media (max-width: 800px) {
+      padding-top: 60px;
+      padding-bottom: 20px;
+    }
+  }
+
+  &__header {
+    @include flex(column, flex-start, flex-start);
+    width: 100%;
+    border-bottom: 1px solid;
+    padding-bottom: 20px;
+  }
+
+  &__title {
+    font-family: var(--font-family-inter);
+    font-weight: 700;
+    line-height: normal;
+    margin-bottom: 16px;
+  }
+
+  &__description {
+    font-family: var(--font-family-uni-sans);
+    @include text-16-16-400;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: normal;
+  }
+
+  &__blocks {
+    @include flex(row, center, null);
+    gap: 32px;
+    padding-top: 30px;
+    margin-bottom: 60px;
+
+    @media (max-width: 1100px) {
+      flex-wrap: wrap;
+    }
+  }
+
+  &__block {
+    position: relative;
+    flex: 1 1 327px;
+    // min-width: 300px;
+    max-width: 329px;
+    min-height: 656px;
+    border-radius: 10px;
+    border: 1px solid #dbdeec;
+    background: white;
+    overflow-y: hidden;
+    overflow-x: hidden;
+    box-shadow:
+      0px 1px 3px 0px rgba(0, 0, 0, 0.1),
+      0px 6px 10px 0px rgba(0, 5, 50, 0.15);
+
+    @media (max-width: 726px) {
+      max-width: 432px;
+      height: fit-content;
     }
 
-    &__container {
-        position: relative;
-        color: var(--color-text-main);
-        padding-top: 100px;
-        padding-bottom: 100px;
-        z-index: 1;
+    @media (max-width: 550px) {
+      flex-basis: auto;
+      min-width: 0;
+      width: 100%;
+    }
+  }
 
-        @media (max-width: 800px) {
-            padding-top: 60px;
-            padding-bottom: 20px;
-        }
+  &__link {
+    position: absolute;
+    bottom: -20px;
+    left: 25px;
+    color: #0063e7;
+    font-weight: 700;
+    transition: 0.2s;
+    width: 100%;
+
+    font-family: var(--font-family-uni-sans);
+    font-size: 16px;
+    font-style: normal;
+    line-height: normal;
+    cursor: pointer;
+    z-index: 2;
+
+    @media (max-width: 726px) {
+      position: static;
     }
 
-    &__header {
-        @include flex(column, flex-start, flex-start);
-        width: 100%;
-        border-bottom: 1px solid;
-        padding-bottom: 20px;
+    &:hover {
+      opacity: 0.3;
     }
+  }
 
-    &__title {
-        font-family: var(--font-family-inter);
-        font-weight: 700;
-        line-height: normal;
-        margin-bottom: 16px;
+  &__block:hover .news-cards__content {
+    // position: static;
+    transform: translateY(-6px);
+  }
+
+  &__block:hover &__link {
+    // position: static;
+    bottom: 20px;
+
+    @media (max-width: 726px) {
+      bottom: -20px;
     }
+  }
 
-    &__description {
-        font-family: var(--font-family-uni-sans);
-        @include text-16-16-400;
-        font-size: 16px;
-        font-weight: 400;
-        line-height: normal;
+  &__block:hover &__img {
+    // height: 180px;
+    transform: scale(1);
+
+    @media (max-width: 726px) {
+      height: 200px;
     }
+  }
 
-    &__blocks {
-        @include flex(row, center, null);
-        gap: 32px;
-        padding-top: 30px;
-        margin-bottom: 60px;
+  &__text {
+    font-family: var(--font-family-uni-sans);
+    font-size: 15px;
+    font-weight: 400;
+    padding: 15px 0;
+    line-height: normal;
+    white-space: pre-wrap;
+  }
 
-        @media (max-width: 1100px) {
-            flex-wrap: wrap;
-        }
+  &__subtitle {
+    color: var(--color-text-main);
+    font-family: var(--font-family-inter);
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 15px;
+    line-height: normal;
+    white-space: pre-wrap;
+  }
+
+  &__content {
+    @include flex(column, flex-start);
+    padding: 25px 25px 20px;
+    transition: all 0.2s linear;
+
+    @media (max-width: 726px) {
+      height: 100%;
+      justify-content: space-between;
+      transform: translateY(-6px);
     }
+  }
 
-    &__block {
-        position: relative;
-        flex: 1 1 327px;
-        // min-width: 300px;
-        max-width: 329px;
-        min-height: 656px;
-        border-radius: 10px;
-        border: 1px solid #DBDEEC;
-        background: white;
-        overflow-y: hidden;
-        overflow-x: hidden;
-        box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.10), 0px 6px 10px 0px rgba(0, 5, 50, 0.15);
+  &__img {
+    height: 200px;
+    width: 330px;
+    object-fit: cover;
+    transition: all 0.2s linear;
+    transform: scale(1.05);
 
-        @media (max-width: 726px) {
-            max-width: 432px;   
-            height: fit-content;
-        }
-
-        @media (max-width: 550px) {
-            flex-basis: auto;
-            min-width: 0;
-            width: 100%;
-        }
+    @media (max-width: 726px) {
+      width: 100%;
+      max-width: 432px;
+      transform: scale(1);
     }
-    
+  }
 
-    &__link {
-        position: absolute;
-        bottom: -20px;
-        left: 25px;
-        color: #0063E7;
-        font-weight: 700;
-        transition: .2s;
-        width: 100%;
+  &__ul {
+    list-style-type: "- ";
+    list-style-position: inside;
+  }
 
-        font-family: var(--font-family-uni-sans);
-        font-size: 16px;
-        font-style: normal;
-        line-height: normal;
-        cursor: pointer;
-        z-index: 2;
+  &__button {
+    color: #fff;
+    border-radius: 100px;
+    background: #101541;
+    padding: 10px 14px;
+    width: fit-content;
+    cursor: pointer;
+    transition: all linear 0.2s;
 
-        @media (max-width: 726px) {
-            position: static;
-        }
-
-        &:hover {
-            opacity: .3;
-        }
+    &:hover {
+      opacity: 0.3;
     }
+  }
 
-    &__block:hover .news-cards__content {
-        // position: static;
-        transform: translateY(-6px);
-    }
+  // &__bottom-white {
+  //     position: absolute;
+  //     height: 80px;
+  //     width: 100%;
+  //     bottom: 0;
+  //     background: linear-gradient(180deg, rgba(255, 255, 255, 0.00) 0%, #FFF 100%);
+  //     z-index: 1;
 
-    &__block:hover &__link {
-        // position: static;
-        bottom: 20px;
-
-        @media (max-width: 726px) {
-            bottom: -20px;
-        }
-    }
-
-    &__block:hover &__img {
-        // height: 180px;
-        transform: scale(1);
-
-        @media (max-width: 726px) {
-            height: 200px;
-        }
-    }
-
-    &__text {
-        font-family: var(--font-family-uni-sans);
-        font-size: 15px;
-        font-weight: 400;
-        padding: 15px 0;
-        line-height: normal;
-        white-space: pre-wrap;
-    }
-
-    &__subtitle {
-        color: var(--color-text-main);
-        font-family: var(--font-family-inter);
-        font-size: 20px;
-        font-weight: 700;
-        margin-bottom: 15px;
-        line-height: normal;
-        white-space: pre-wrap;
-    }
-
-    &__content {
-        @include flex(column, flex-start);
-        padding: 25px 25px 20px;
-        transition: all .2s linear;
-
-        @media (max-width: 726px) {
-            height: 100%;
-            justify-content: space-between;
-            transform: translateY(-6px);
-        }
-    }
-
-    &__img {
-        height: 200px;
-        width: 330px;
-        object-fit: cover;
-        transition: all .2s linear;
-        transform: scale(1.05);
-
-        @media (max-width: 726px) {
-            width: 100%;
-            max-width: 432px;   
-            transform: scale(1);
-        }
-    }
-
-    &__ul {
-        list-style-type: "- ";
-        list-style-position: inside;
-    }
-
-    &__button {
-        color: #FFF;
-        border-radius: 100px;
-        background: #101541;
-        padding: 10px 14px;
-        width: fit-content;
-        cursor: pointer;
-        transition: all linear .2s;
-
-        &:hover {
-            opacity: .3;
-        }
-    }
-
-    // &__bottom-white {
-    //     position: absolute;
-    //     height: 80px;
-    //     width: 100%;
-    //     bottom: 0;
-    //     background: linear-gradient(180deg, rgba(255, 255, 255, 0.00) 0%, #FFF 100%);
-    //     z-index: 1;
-
-    //     @media (max-width: 726px) {
-    //         display: none;
-    //     }
-    // }
+  //     @media (max-width: 726px) {
+  //         display: none;
+  //     }
+  // }
 }

@@ -1,22 +1,21 @@
-@import './assets/styles/fonts.scss';
-@import './assets/styles/mixins/flex.scss';
+@import "./assets/styles/fonts.scss";
+@import "./assets/styles/mixins/flex.scss";
 
-$font-family-uni-sans: 'Uni Sans';
-$font-family-inter: 'Inter';
-$font-family-segoe: 'Segoe UI', sans-serif;
-$font-family-roboto: 'Roboto', sans-serif;
+$font-family-uni-sans: "Uni Sans";
+$font-family-inter: "Inter";
+$font-family-segoe: "Segoe UI", sans-serif;
+$font-family-roboto: "Roboto", sans-serif;
 
 $color-bg-dark: #000625;
-$color-bg-gray: #F0F0F0;
-$color-text-main: #1A1F36;
-$color-border-gray: #DBDEEC;
+$color-bg-gray: #f0f0f0;
+$color-text-main: #1a1f36;
+$color-border-gray: #dbdeec;
 
 :root {
   --font-family-uni-sans: #{$font-family-uni-sans};
   --font-family-inter: #{$font-family-inter};
   --font-family-segoe: #{$font-family-segoe};
   --font-family-roboto: #{$font-family-roboto};
-
 
   --color-bg-dark: #{$color-bg-dark};
   --color-bg-gray: #{$color-bg-gray};
@@ -69,7 +68,7 @@ button {
 }
 
 body {
-  font-family: 'Inter';
+  font-family: "Inter";
   font-weight: 400;
   font-display: block;
 }
@@ -117,7 +116,7 @@ h2 {
   line-height: normal;
   padding-left: 15px;
   margin-left: -15px;
-  border-left: 2px solid #0096E9;
+  border-left: 2px solid #0096e9;
 
   @media (max-width: 800px) {
     font-size: 18px;
@@ -132,7 +131,7 @@ h3 {
   font-style: normal;
   font-weight: 700;
   line-height: normal;
-  border-left: 2px solid #0096E9;
+  border-left: 2px solid #0096e9;
   padding-left: 15px;
   margin-left: -15px;
 
@@ -170,7 +169,6 @@ section {
 
 .App__container::-webkit-scrollbar-track {
   background-color: rgba(208, 208, 208, 0.2);
-
 }
 
 .App__container::-webkit-scrollbar-thumb {
@@ -189,10 +187,10 @@ input[type="checkbox"] {
   background-color: #fff;
   margin: 0;
   font: inherit;
-  color: #D2DBE9;
+  color: #d2dbe9;
   width: 19px;
   height: 19px;
-  border: 1px solid #D2DBE9;
+  border: 1px solid #d2dbe9;
   border-radius: 0.15em;
   transform: translateY(-0.075em);
   display: grid;
