@@ -42,7 +42,7 @@
     }
 
     &__blocks {
-        @include flex(row, center, null, nowrap);
+        @include flex(row, center, null);
         gap: 32px;
         padding-top: 30px;
         margin-bottom: 60px;
@@ -54,7 +54,7 @@
 
     &__block {
         position: relative;
-        flex: 1 1 402px;
+        flex: 1 1 327px;
         // min-width: 300px;
         max-width: 329px;
         min-height: 656px;
@@ -142,6 +142,7 @@
         font-weight: 700;
         margin-bottom: 15px;
         line-height: normal;
+        white-space: pre-wrap;
     }
 
     &__content {

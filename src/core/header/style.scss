@@ -10,7 +10,7 @@
     font-style: normal;
     font-weight: 700;
     line-height: normal;
-    @include flex(row, center, center);
+    @include flex(row, center, center, nowrap);
     // margin-top: 30px;
     align-items: center;
     // padding: 30px;
@@ -19,6 +19,7 @@
     // background: rgba(255, 255, 255, 0.10); 
     // backdrop-filter: blur(20px);
     z-index: 2;
+    font-display: block;
 
     @media (max-width: 800px) {
         margin-top: 0;
@@ -32,11 +33,12 @@
 
     &__container {
         position: relative;
-        @include flex(row, space-between, center);
+        @include flex(row, space-between, center, nowrap);
         max-width: 1080px;
         padding-left: 15px;
         width: 100%;
         min-height: 121px;
+        font-display: block;
 
         @media (max-width: 1143px) {
             min-height: 0;
@@ -56,7 +58,7 @@
         }
 
         &-container {
-            @include flex(row, null, center);
+            @include flex(row, null, center, nowrap);
 
             @media (max-width: 260px) {
                 display: none;
@@ -70,14 +72,14 @@
     }
 
     &__signin {
-        @include flex(row, flex-start, center);
+        @include flex(row, flex-start, center, nowrap);
         gap: 30px;
         cursor: pointer;
         transition: all linear .2s;
     }
 
     &-nav {
-        @include flex(row, space-between);
+        @include flex(row, space-between, null, nowrap);
         gap: 30px;
         margin-right: 80px;
 
@@ -90,7 +92,7 @@
         }
 
         &__connect {
-            @include flex(column, center);
+            @include flex(column, center, center, nowrap);
             border-radius: 100px;
             background: rgba(255, 255, 255, 0.20);
             height: 36px;
