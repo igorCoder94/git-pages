@@ -12,21 +12,19 @@ const NewsCard = ({ cardData }) => {
                     <div className='news-cards__text'>{ cardData.date }</div>
                     <div className='news-cards__subtitle'>{ cardData.title }</div>
                     
-                    { cardData.content.map((content) => {
+                    { cardData.content.map((content, index) => {
                         return (
-                        <>
+                        <div key={index}>
                             { content.text ? <div className='news-cards__text'>{ content.text }</div> : null }
 
                             {content.list.length ? <div className='news-cards__text'>
                                 <ul className='news-cards__ul'>
-                                    { content.list.map((li) => (
-                                        <>
-                                            <li>{ li }</li>
-                                        </>   
+                                    { content.list.map((li, index) => (
+                                        <li key={index}>{ li }</li>
                                     )) }
                                 </ul>
                             </div> : null }
-                        </>
+                        </ div>
                         
                         )
                     })}                   
@@ -51,7 +49,7 @@ const NewsCards = () => {
                 { newsData.map((cardData, index) => {
                     if(cardsCount > index) {
                         return (
-                        <NewsCard cardData={cardData} />
+                        <NewsCard cardData={cardData} key={cardData.id} />
                     ) } else {
                         return null
                     }

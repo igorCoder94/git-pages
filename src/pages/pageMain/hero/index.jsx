@@ -24,8 +24,6 @@ import 'swiper/css/pagination';
 import 'swiper/css/effect-fade';
 import 'swiper/css';
 import BordersHero from '../../../shared/borders-hero';
-import { ReactComponent as IconLeftTriangle } from '../../../assets/images/backgrounds/left-triangle.svg';
-import { ReactComponent as IconRightTriangle } from '../../../assets/images/backgrounds/right-triangle.svg';
 
 
 const Hero = () => {

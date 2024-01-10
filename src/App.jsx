@@ -1,7 +1,6 @@
 import './App.scss';
 import { Route, Routes } from "react-router-dom";
 import PageRequest from "./pages/pageRequest";
-import PageDispatching from "./pages/pageDispatching"
 import PageMain from "./pages/pageMain";
 import Header from './core/header';
 import Footer from './core/footer';
@@ -66,7 +65,6 @@ function App() {
           <Routes>
             <Route path="/" element={<PageMain togglePopup={togglePopup} />} ></Route>
             <Route path="/request" element={<PageRequest togglePopup={togglePopup} />} ></Route>
-            <Route path="/dispatching" element={<PageDispatching />} ></Route>
           </Routes>
         </main>
         <Footer togglePopup={togglePopup} />
