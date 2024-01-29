@@ -179,7 +179,7 @@ const Form = () => {
     axios
       .post(
         "https://sheet.best/api/sheets/95e8a488-fb89-4bf7-874d-7f6225269c7d",
-        formData,
+        formData
       )
       .then((response) => {
         setNotification("Предложение успешно отправлено!");
@@ -300,7 +300,10 @@ const Form = () => {
                         )}
 
                         {module.basic.map((basic) => (
-                          <div className="grid__item-inner-container">
+                          <div
+                            className="grid__item-inner-container"
+                            key={basic.optionName}
+                          >
                             <div className="grid__item-inner-list">
                               {basic.options.map((item) => (
                                 <div className="grid__item-inner grid__item-inner">
@@ -337,10 +340,16 @@ const Form = () => {
                         ) : null}
 
                         {module.additional?.map((additional) => (
-                          <div className="grid__item-inner-container">
+                          <div
+                            className="grid__item-inner-container"
+                            key={additional.optionName}
+                          >
                             <div className="grid__item-inner-list">
-                              {additional.options.map((item) => (
-                                <div className="grid__item-inner grid__item-inner">
+                              {additional.options.map((item, index) => (
+                                <div
+                                  className="grid__item-inner grid__item-inner"
+                                  key={index}
+                                >
                                   {item}
                                 </div>
                               ))}

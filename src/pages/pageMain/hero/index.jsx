@@ -278,7 +278,7 @@ const Hero = () => {
                 <img src={dots} alt="" />
             </div> */}
 
-        {!isMobile ? (
+        {!isTablet ? (
           <div className="hero__partners">
             <div className="hero__partners-img">
               <Gazprom />
@@ -339,10 +339,10 @@ const Hero = () => {
             </div>
           </div>
         )}
-      </div>
 
-      <div className="borders-container">
-        <BordersHero />
+        <div className="borders-container">
+          <BordersHero />
+        </div>
       </div>
 
       <div className="background-triangles">
@@ -353,8 +353,6 @@ const Hero = () => {
 
       <div className="final-triangle"></div>
       <div className="background-white"></div>
-      {/* <div className='tr-one'></div>
-        <div className='tr-two'></div> */}
     </section>
   );
 };

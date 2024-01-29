@@ -32,7 +32,6 @@ const Join = ({ togglePopup }) => {
             </div>
             <div className="join__links">
               <a
-                style={{ pointerEvents: "none", opacity: 0.3 }}
                 className="join__text join__link"
                 href="/Функциональные характеристики.pdf"
                 download
@@ -40,12 +39,18 @@ const Join = ({ togglePopup }) => {
                 Функциональные требования >
               </a>
               <a
-                style={{ pointerEvents: "none", opacity: 0.3 }}
                 className="join__text join__link"
                 href="/Руководство пользователя.pdf"
                 download
               >
-                Руководство по эксплуатации >
+                Руководство пользователя >
+              </a>
+              <a
+                className="join__text join__link"
+                href="/Руководство администратора.pdf"
+                download
+              >
+                Руководство администратора >
               </a>
               <a
                 className="join__text join__link"

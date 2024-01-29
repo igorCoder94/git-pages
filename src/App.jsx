@@ -55,7 +55,7 @@ function App() {
         });
       }
     }, 200);
-  }, [location.hash]);
+  }, [location.pathname]);
 
   return (
     <div className="App">
@@ -72,7 +72,7 @@ function App() {
           <Routes>
             <Route
               path="/"
-              element={<PageMain togglePopup={togglePopup} />}
+              element={<PageMain togglePopup={togglePopup} exact />}
             ></Route>
             <Route
               path="/request"
